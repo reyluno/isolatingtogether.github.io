@@ -33,9 +33,32 @@
 }
 
 .placeholder {
-  height: 400px;
-  width: 600px;
+  width: 100%;
+  padding-top: 100%;
   background-color: #e3e3e3;
+}
+
+.placeholder-prose {
+  width: 100%;
+  padding-top: 48%;
+  background-color: #e3e3e3;
+}
+.circle-container {
+  right: 0;
+  bottom: 0;
+}
+.circle {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #88CCF1;
+  -webkit-box-shadow: 7px 7px 5px -6px rgba(0,0,0,0.1);
+  -moz-box-shadow: 7px 7px 5px -6px rgba(0,0,0,0.1);
+  box-shadow: 7px 7px 5px -6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .body-text {
@@ -87,8 +110,8 @@
 }
 
 .card {
-  border: none;
-  width: 250px;
+  width: 80%;
+  height: 80%;
 }
 
 .card-img {
