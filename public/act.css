@@ -12,22 +12,22 @@
 
 .display-1 {
   font-family: 'Fredoka One';
-  color: #985277;
+  color: #ffa69e;
 }
 
 .display-4 {
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
   font-size: 1.5em;
   padding: 10px;
 }
 
 .lead {
-  font: 2.0em 'Montserrat';
+  font: 2.0em 'Open Sans';
   color: #1f1f1f;
 }
 
 .subtitle {
-  font: 1.5em 'Montserrat';
+  font: 1.5em 'Open Sans';
   color: #1f1f1f;
   padding: 0;
 }
@@ -39,7 +39,7 @@
 }
 
 .body-text {
-  font: 1.2em 'Montserrat';
+  font: 1.2em 'Open Sans';
   text-align: left;
   line-height: 1.4;
   color: #1f1f1f;
@@ -47,12 +47,12 @@
 }
 
 .action-title {
-  font: 3em 'Montserrat'600;
+  font: 3em 'Open Sans'600;
   color: #985277;
 }
 
 .btn-primary {
-  background-color: #ED6A5A;
+  background-color: #ffa69e;
   border: none;
   border-radius: 30%/50%;
 }
@@ -71,9 +71,9 @@
 }
 
 .section-header {
-  font-family: 'Fredoka One';
+  font-family: 'Covered By Your Grace';
   font-size: 80px;
-  color: #ED6A5A;
+  color: #ffa69e;
   padding: 20px;
 }
 
@@ -88,7 +88,10 @@
 
 .card {
   border: none;
-  width: 250px;
+  width: 300px;
+  -webkit-box-shadow: 10px 10px 20px -14px rgba(0,0,0,0.2);
+  -moz-box-shadow: 10px 10px 20px -14px rgba(0,0,0,0.2);
+  box-shadow: 10px 10px 20px -14px rgba(0,0,0,0.2);
 }
 
 .card-img {
@@ -98,7 +101,7 @@
 }
 
 .card-title {
-  font-family: 'Montserrat';
+  font-family: 'Open Sans';
   font-size: 20px;
 }
 
