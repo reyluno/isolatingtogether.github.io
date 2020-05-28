@@ -1,24 +1,14 @@
 .title {
-  font: 6em 'Fredoka One';
-  color: #985277;
-  line-height: 1.0;
+  font: 8.5em 'Covered By Your Grace';
+  color: #fff;
+  line-height: 0.8;
+  margin: 0.5em 0;
 }
 
 .nav-link {
-  font-size: 1.2em;
-  margin: 0 1em;
-  font-weight: bold;
-}
-
-.display-1 {
-  font-family: 'Fredoka One';
-  color: #ffa69e;
-}
-
-.display-4 {
   font-family: 'Open Sans';
-  font-size: 1.5em;
-  padding: 10px;
+  font-size: 1.1em;
+  margin: 0 0.7em;
 }
 
 .lead {
@@ -32,12 +22,6 @@
   padding: 0;
 }
 
-.placeholder {
-  height: 400px;
-  width: 600px;
-  background-color: #e3e3e3;
-}
-
 .body-text {
   font: 1.2em 'Open Sans';
   text-align: left;
@@ -46,15 +30,26 @@
   font-weight: 500;
 }
 
-.action-title {
-  font: 3em 'Open Sans'600;
-  color: #985277;
+.clear {
+  font-size: 1em;
+  color: #d3d3d3;
+  transition: 0.3s;
 }
-
+.clear:hover {
+  color: #1f1f1f;
+}
 .btn-primary {
-  background-color: #ffa69e;
+  box-shadow: 0px 0px 5px rgba(66,66,66,.75);
+  text-shadow: -50px 0px 0px rgba(66,66,66,.0);
   border: none;
-  border-radius: 30%/50%;
+	background-color:#FFA69E;
+	border-radius:28px;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:8px 22px;
+	text-decoration:none;
 }
 
 .btn-primary:hover {
@@ -73,17 +68,7 @@
 .section-header {
   font-family: 'Covered By Your Grace';
   font-size: 80px;
-  color: #ffa69e;
-  padding: 20px;
-}
-
-.row {
-  margin: 20px 0;
-}
-
-.clear {
-  background-color: transparent;
-  color: #d3d3d3;
+  color: #FFA69E;
 }
 
 .card {
@@ -115,20 +100,6 @@
   font-size: 51px;
 }
 
-.checkbox {
-  height: 50px;
-  width: 50px;
-  color: #985277;
-  border: 5px solid #1f1f1f;
-}
-
 h6 {
   color: #fff;
-}
-
-.divider {
-  width: 80%;
-  height: 1px;
-  background-color: #1f1f1f;
-  margin: 10px auto 20px auto;
 }

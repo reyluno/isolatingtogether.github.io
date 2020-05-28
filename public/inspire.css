@@ -1,30 +1,129 @@
+body, html {
+  overflow-x: hidden;
+}
+
 .title {
-  font: 6em 'Fredoka One';
-  color: #985277;
-  line-height: 1.0;
+  font: 10em 'Covered By Your Grace';
+  color: #1f1f1f;
+  line-height: 0.8;
+  margin: 0.3em 0;
 }
 
-.nav-link {
-  font-size: 1.2em;
-  margin: 0 1em;
-  font-weight: bold;
+.bg {
+  max-width: 100%;
+  opacity: 0.1;
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
 }
 
-.display-1 {
-  font-family: 'Covered By Your Grace';
-  font-size: 3em;
-  color: #aed9e0;
+.bg-overlay {
+  background-color: #fff;
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
 }
 
-.display-4 {
+.body-text {
+  font: 1.2em 'Open Sans';
+  text-align: left;
+  line-height: 1.5;
+  color: #1f1f1f;
+  font-weight: 500;
+}
+
+.section-header {
   font-family: 'Open Sans';
-  font-size: 1.5em;
-  padding: 10px;
+  font-weight: 700;
+  font-size: 50px;
+  color: #DEC0F1;
+}
+
+hr.new3 {
+  border-top: 10px dotted #DEC0F1;
+}
+
+.subtitle {
+  font: 1.5em 'Open Sans';
+  color: #1f1f1f;
+}
+
+.arrow a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  z-index: 2;
+  display: inline-block;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  color: #1f1f1f;
+  font : normal 400 20px/1 'Josefin Sans', sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: opacity .3s;
+}
+.arrow a:hover {
+  opacity: .5;
+}
+
+#scroll a {
+  padding-top: 60px;
+}
+#scroll a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #1f1f1f;
+  border-bottom: 1px solid #1f1f1f;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb04 2s infinite;
+  animation: sdb04 2s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb04 {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+  }
+}
+@keyframes sdb04 {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  20% {
+    transform: rotate(-45deg) translate(-10px, 10px);
+  }
+  40% {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+}
+
+.cn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-link {
+  font-family: 'Open Sans';
+  font-size: 1.1em;
+  margin: 0 0.7em;
 }
 
 .action-title {
   font: 3em 'Open Sans'600;
-  color: #985277;
+  color: #88D18A;
 }
 
 .btn-primary {
