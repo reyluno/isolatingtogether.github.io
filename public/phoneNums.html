@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <body>
+      <!-- <p id="state"></p> -->
+      <!-- here we'll put the three phone numbers -->
+      <p id="sen1"></p>
+      <p id="sen2"></p>
+      <p id="gov"></p>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+    <script type="text/javascript">
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTho_8lRiF1tVTSbQU33zMge3cQRzIsf93hnaNNgJal7Y9T29J8-rHOUfPfzR7ni3tPg8As6mHKeZAH/pub?output=csv';
+      var data;
+
+      function init() {
+        Papa.parse(public_spreadsheet_url, {
+          download: true,
+          header: true,
+          complete: showInfo
+        })
+      }
+
+      window.addEventListener('DOMContentLoaded', init)
+
+      function showInfo(results) {
+        data = results.data
+
+        // remove the following alert after making sure everything else is working
+        // data comes through as a simple array since simpleSheet is turned on
+        alert("Successfully processed " + data.length + " rows!")
+        // document.getElementById("state").innerHTML = "<strong>States:</strong> " + [ data[0].State, data[1].State, data[2].State ].join(", ");
+        console.log(data);
+      }
+
+      function getNumbers(state) {
+          var i;
+          for (i = 0; i < data.length; i++) {
+              if (data[i].State == state) {
+                document.getElementById("sen1").innerHTML = "<strong>Senator:</strong> " + [ data[i].Name, data[i].Party, data[i].Phone ].join(" ");
+                document.getElementById("sen2").innerHTML = "<strong>Senator:</strong> " + [ data[i+1].Name, data[i+1].Party, data[i+1].Phone ].join(" ");
+                document.getElementById("gov").innerHTML = "<strong>Governor:</strong> " + [ data[i+2].Name, data[i+2].Phone ].join(" ");
+                break; // get out of the loop. we have the information we want
+                console.log("Got our data");
+              }
+          }
+      }
+
+    </script>
+    <input type="text" name="state" id="searchState"/>
+    <button onclick="getNumbers(document.getElementById('searchState').value)">Get Numbers</button>
+  </body>
+</html>
