@@ -9,6 +9,7 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
     <script type="text/javascript">
+      // published spreadsheet. move to firebase?
       var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTho_8lRiF1tVTSbQU33zMge3cQRzIsf93hnaNNgJal7Y9T29J8-rHOUfPfzR7ni3tPg8As6mHKeZAH/pub?output=csv';
       var data;
 
@@ -27,8 +28,7 @@
 
         // remove the following alert after making sure everything else is working
         // data comes through as a simple array since simpleSheet is turned on
-        alert("Successfully processed " + data.length + " rows!")
-        // document.getElementById("state").innerHTML = "<strong>States:</strong> " + [ data[0].State, data[1].State, data[2].State ].join(", ");
+        // alert("Successfully processed " + data.length + " rows!")
         console.log(data);
       }
 
