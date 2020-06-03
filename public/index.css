@@ -255,6 +255,14 @@ h6 {
   padding: 5px;
   text-transform: uppercase;
 }
+a {
+  color: #fff;
+  transition: 0.3s;
+}
+a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
 
 .divider {
   width: 80%;

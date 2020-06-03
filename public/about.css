@@ -4,9 +4,8 @@ body, html {
 
 .title {
   font: 10em 'Covered By Your Grace';
-  color: #1f1f1f;
+  color: #88CCF1;
   line-height: 0.8;
-  margin: 0.3em 0;
 }
 
 .bg {
@@ -196,6 +195,9 @@ h6 {
   color: #fff;
 }
 
+a {
+  color: #88CCF1;
+}
 a:hover {
   text-decoration: none;
 }
