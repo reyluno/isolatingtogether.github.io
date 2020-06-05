@@ -5,12 +5,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--JQuery-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <!--Bootstrap/CSS Import-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
   <link rel="stylesheet" href="inspire.css" class="rel">
   <!--Fonts-->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -18,9 +24,11 @@
   <!--Tab Title-->
   <title>Inspire Together</title>
 </head>
+
 <body>
   <!--NAVBAR-->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm" style="background-color: #DEC0F1; padding: 1.2em 2em;">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm"
+    style="background-color: #DEC0F1; padding: 1.2em 2em;">
     <a class="navbar-brand" href="index.html"><img src="img/LogoWhite_Small.png" style="height: 60px; width: auto;"></a>
     </button>
     <ul class="navbar-nav mr-auto">
@@ -49,8 +57,8 @@
 
       <!-- NOTE: i can't get this stupid script to scroll smoothly45 -->
       <script>
-        $(function() {
-          $('a[href*=#]').on('click', function(e) {
+        $(function () {
+          $('a[href*=\\#]').on('click', function (e) {
             e.preventDefault();
             $('html, body').animate({
               scrollTop: $($(this).attr('href')).offset().top
@@ -58,16 +66,16 @@
           });
         });
       </script>
+
       <section id="scroll" class="arrow">
         <a href="#actions"><span></span></a>
       </section>
-
 
     </div>
   </div>
 
   <div class="container" style="margin-top: 50px;">
-    <section class="actions">
+    <section id="actions">
       <div class="row">
         <div class="col-4">
           <div class="card">
@@ -122,43 +130,69 @@
   </div>
 
   <div class="container mt-5">
-    <div class="body-text">There’s a lot of important work ahead: from volunteering on the ground and making phone calls, to striving towards our broader goal of creating hundreds of thousands of jobs for people to produce and carry out tests, and
-      contact trace. In order to make our work as effective as possible, we need to make sure everyone knows about this movement, and that we bring as many people into our vision as possible. Here’s a few ways to help make this happen.</div>
+    <div class="body-text">There’s a lot of important work ahead: from volunteering on the ground and making phone
+      calls, to striving towards our broader goal of creating hundreds of thousands of jobs for people to produce and
+      carry out tests, and
+      contact trace. In order to make our work as effective as possible, we need to make sure everyone knows about this
+      movement, and that we bring as many people into our vision as possible. Here’s a few ways to help make this
+      happen.</div>
   </div>
   <div class="container my-5">
     <div class="section-header my-3">Bringing People In</div>
     <div class="body-text">There are a few main things to focus on when sharing our mission with others:
       <ul>
-        <li>We are a movement of love and solidarity. We are among the vast majority of people who are frustrated with how things have been, who care deeply about the welfare of others, and who know we can make things better–for everyone–if we work
+        <li>We are a movement of love and solidarity. We are among the vast majority of people who are frustrated with
+          how things have been, who care deeply about the welfare of others, and who know we can make things better–for
+          everyone–if we work
           together.</li>
         <li>We have three main functions:</li>
         <ul>
           <li>bring people to the work they can do right in their own communities,</li>
-          <li>unite people across the country behind national objectives, namely creating hundreds of thousands of jobs to successfully mass test and contact trace everyone in this country</li>
-          <li>cultivate a spirit of compassion and love, through our philosophy and more directly through the art created by our neighbors
+          <li>unite people across the country behind national objectives, namely creating hundreds of thousands of jobs
+            to successfully mass test and contact trace everyone in this country</li>
+          <li>cultivate a spirit of compassion and love, through our philosophy and more directly through the art
+            created by our neighbors
           </li>
         </ul>
       </ul>
     </div>
     [graphic]
   </div>
-<div class="container-flex my-5">
-  <div class="container my-5">
-    <div class="section-header my-3">Spreading the Word</div>
-    <div class="body-text">
-      <b>Write to your local newspaper.</b> This is a national movement being built in a country that is fractured in more ways than one. The best way to overcome these fractures is to make sure that every person in every community in this country knows about what we are fighting for. Go to your local newspaper’s website and find a contact or letter-to-the-editor page, and write about what this movement means to you. Don’t worry about the data, numbers, or technicalities–that’s where this site comes into play. What we need is for YOUR voice to be heard. There are millions of people out there looking for a sign of hope–a sign of people caring for each other. Be the one to give the people in your community that hope.
+  <div class="container-flex my-5">
+    <div class="container my-5">
+      <div class="section-header my-3">Spreading the Word</div>
+      <div class="body-text">
+        <b>Write to your local newspaper.</b> This is a national movement being built in a country that is fractured in
+        more ways than one. The best way to overcome these fractures is to make sure that every person in every
+        community in this country knows about what we are fighting for. Go to your local newspaper’s website and find a
+        contact or letter-to-the-editor page, and write about what this movement means to you. Don’t worry about the
+        data, numbers, or technicalities–that’s where this site comes into play. What we need is for YOUR voice to be
+        heard. There are millions of people out there looking for a sign of hope–a sign of people caring for each other.
+        Be the one to give the people in your community that hope.
+      </div>
+      <div class="body-text my-5">
+        <b>Creating a local online community.</b> Facebook groups are a super easy way to organize people around common
+        goals. Heck, even in our national volunteer effort bank, we highlight multiple local and regional facebook
+        groups dedicated towards things like making masks. If you feel like your community is in need of something,
+        chances are other people think so too! Make a community online group to begin filling in that gap, and invite
+        all your friends, family, and neighbors to contribute. Be sure to contact us so we can add it to our bank and
+        help spread the word for you!
+      </div>
+      <div class="body-text">
+        <b>Sharing our movement on social media.</b> Again, the only way we can hope for success is if as many people as
+        possible are aware of our movement and its goals. The more people who know about us, the more people who will be
+        a part of it. Lucky for us, here you are, reading this right now. You are a part of this world just as much as
+        anyone else–you have a voice, and you have people who care about what you have to say. An easy way for you to
+        help make this vision happen is by sharing our message with the world. Use your platform for hope.
+      </div>
+      <hr class="new3 my-5">
+      </hr>
+      <div class="body-text my-5">Every letter-to-the-editor, every small, simple community action, and every share is a
+        contribution to this movement. We are excited for you to be a part of something great–great because you are a
+        part of it.
+      </div>
     </div>
-    <div class="body-text my-5">
-      <b>Creating a local online community.</b> Facebook groups are a super easy way to organize people around common goals. Heck, even in our national volunteer effort bank, we highlight multiple local and regional facebook groups dedicated towards things like making masks. If you feel like your community is in need of something, chances are other people think so too! Make a community online group to begin filling in that gap, and invite all your friends, family, and neighbors to contribute. Be sure to contact us so we can add it to our bank and help spread the word for you!
-    </div>
-    <div class="body-text">
-      <b>Sharing our movement on social media.</b> Again, the only way we can hope for success is if as many people as possible are aware of our movement and its goals. The more people who know about us, the more people who will be a part of it. Lucky for us, here you are, reading this right now. You are a part of this world just as much as anyone else–you have a voice, and you have people who care about what you have to say. An easy way for you to help make this vision happen is by sharing our message with the world. Use your platform for hope.
-    </div>
-    <hr class="new3 my-5"></hr>
-    <div class="body-text my-5">Every letter-to-the-editor, every small, simple community action, and every share is a contribution to this movement. We are excited for you to be a part of something great–great because you are a part of it.
-</div>
   </div>
-</div>
 
 
   <!--FOOTER-->
