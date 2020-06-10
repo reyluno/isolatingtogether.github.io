@@ -5,8 +5,9 @@ storage for artist submissions
 
 #imports
 import os
-from google.cloud import firestore
-import google.auth
+import firebase_admin
+from firebase_admin import credentials, firestore
+import google.cloud
 
 # can potentially execute the cloud utils rsync here if we want all in one
 
@@ -14,33 +15,26 @@ import google.auth
 def cloudConnect(debug=False):
     # let's connect and add a new document
     # get credentials
+    creds = credentials.Certificate("./firebaseSAkey.json")
+    
     # use credentials to login to client
+    app = firebase_admin.initialize_app(creds)
+    
     # return the client instance
-    db = firestore.Client()
+    db = firestore.client()
     
     if debug:
-        print("Connected to cloud")
+        print("Connected to firebase")
 
     return db
 
-def uploadData(db, directory, debug=False):
+def uploadData(doc_ref, directory, debug=False):
     # when we get to the final version, this will use directory to be specific
-
-    doc_ref = db.collection(u'artists').document(u'johndoe')
-    
-    # fill in the document's metadata
-    # name, email and first contact date
-    doc_ref.set({
-        u'name': u'John Doe',
-        u'email': u'john.doe@gmail.com',
-        u'fc_date': u'01/01/2020'
-    })
-    
-    # check if it worked
-    users_ref = db.collection(u'artists')
-
-    for doc in users_ref.stream():
-        print(u'{} => {}'.format(doc.id, doc.to_dict()))
+    doc = doc_ref.get()
+    if doc.exists:
+        print(f'Doc data: {doc.to_dict()}')
+    else:
+        print(u'No such document found!')
 
     # create a subcollection for the image metadata
 
@@ -51,13 +45,15 @@ def uploadData(db, directory, debug=False):
 
 # function to go through each folder and upload the artist and image metadata
 # use last upload time to determine whether to change metadata?
-def uploadArtistMetadata(artist="", debug=False):
+def uploadArtistMetadata(db, artist="", debug=False):
     # use the artist name to open the right folder. If no argument, go through
-    # all folders.
-    #if not artist:
+    # all folders
     for roots, dirs, files in os.walk("."):
         # we only care about the directories at this point
         for directory in dirs:
+            # get document corresponding to artist
+            doc_ref = db.collection(u'contacts').document(directory)
+
             if artist:
                 if artist != directory:
                     continue
@@ -65,21 +61,21 @@ def uploadArtistMetadata(artist="", debug=False):
                 # here we know that we found artist
                 if debug:
                     print("Found {} for {}".format(directory, artist))
-                uploadData(directory, debug)
+                uploadData(doc_ref, directory, debug)
                 return # finished at this point
 
-            uploadData(directory, debug)
+            uploadData(doc_ref, directory, debug)
 # main 
 def main(debug=False):
     # get client and authorize the credentials locally
     # connect to our Firestore database
-    cloudConnect(debug)
+    db = cloudConnect(debug)
 
-    # get the document that we are going to be uploading to
+    # get the doc_refument that we are going to be uploading to
     print("What is the name of the artist?")
     artist = input("Input the name here: ")
     
-    uploadArtistMetadata(artist, debug)
+    uploadArtistMetadata(db, artist, debug)
  
     print("Finished uploading info for {}".format(artist))
 
