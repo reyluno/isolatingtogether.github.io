@@ -1,0 +1,73 @@
+<!doctype html>
+<!-- Note that this html outline could serve well as a default snippet -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Testing .js locally</title>
+    <meta name="description" content="Testing csvreader">
+    <meta name="author" content="tester">
+
+    <!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
+
+</head>
+
+<body>
+    <!-- Put HTML first so it is visible to script -->
+    <h1>Take state input and retrieve from spreadsheet</h1>
+        <!-- Following field is where we type the state -->
+        <p>What state do you want to display efforts for?</p>
+        <input type="text" name="in_state" id="state">
+
+        <!-- Now we pass the value typed in to our onclick function (assume correct cases for now) -->
+        <button onclick="entry(document.getElementById('state').value)">Filter</button>
+        <p>For testing, see the data displayed below:</p>
+        <p id="dataviewer">Data here</p>
+
+    <script type="text/javascript" lang="javascript" 
+        src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.full.min.js"></script>
+    <script>
+        // set our variables
+        const filePath = "./States.xlsx";
+        var viewer = document.getElementById('dataviewer');
+        
+        function importFile(state){
+            // use loading function to get file from server-side
+            fetch(filePath).then(function(res) {
+                // data as arraybuffer
+                if(!res.ok) throw new Error("importing failed");
+                return res.arrayBuffer();
+                })
+                .then(function(ab) {
+                    // received data async. now parse ab = ArrayBuffer
+                    var data = new Uint8Array(ab);
+                    var workbook = XLSX.read(data, {
+                        type: "array"
+                    });
+
+                    //have the workbook. Now use the input state and get a json from the sheet
+                    var worksheet = workbook.Sheets[state];
+                    var _JsonData = XLSX.utils.sheet_to_json(worksheet, {raw: true });
+
+                    // log the output to see what we have
+                    console.log(_JsonData);
+
+                    /* now could take the json data and make something from it in the 
+                    dataviewer division */
+                    
+                });
+        }
+
+        // this will be our entry point to the parsing
+        function entry(state){
+            console.log("You have reached our parsing entry point.");
+            // we will use this entry point to evaluate the state logic
+            // assume case sensitive for now
+            // let stateCi = state.toLowerCase();
+            console.log(`Beginning parse for ${state}...`);
+            importFile(state);
+        }
+
+    </script>
+    </body>
+</html>
