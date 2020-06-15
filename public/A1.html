@@ -7,21 +7,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!--Bootstrap/CSS Import-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
   <link rel="stylesheet" href="A1.css" class="rel">
   <!--Fonts-->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
   <!--Tab Title-->
   <title>1 | Pandemic Testing Board</title>
 </head>
 
 <body>
+  <!-- Resistbot chatbot code -->
+  <div class="fb-customerchat" page_id="1224106861035505" theme_color="#0084ff"
+    logged_in_greeting="Say &ldquo;resist&rdquo; and I'll help you write to your officials!"
+    logged_out_greeting="Say &ldquo;resist&rdquo; and I'll help you write to your officials!">
+  </div>
+
+
   <!--NAVBAR-->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm" style="background-color: #88CCF1; padding: 1.2em 2em;">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm"
+    style="background-color: #88CCF1; padding: 1.2em 2em;">
     <a class="navbar-brand" href="index.html"><img src="img/LogoWhite_Small.png" style="height: 60px; width: auto;"></a>
     </button>
     <ul class="navbar-nav mr-auto">
@@ -51,8 +82,8 @@
 
       <!-- NOTE: i can't get this stupid script to scroll smoothly45 -->
       <script>
-        $(function() {
-          $('a[href*=#]').on('click', function(e) {
+        $(function () {
+          $('a[href*=#]').on('click', function (e) {
             e.preventDefault();
             $('html, body').animate({
               scrollTop: $($(this).attr('href')).offset().top
@@ -72,15 +103,21 @@
     <section class="more">
       <div class="row">
         <div class="col">[chart]</div>
-        <div class="col">We are witnessing unbelievable devastation, and so far we have fallen short in facing this crisis. Now, we need to demand more–from ourselves and each other.
+        <div class="col">We are witnessing unbelievable devastation, and so far we have fallen short in facing this
+          crisis. Now, we need to demand more–from ourselves and each other.
 
-          We need the Pandemic Testing Board–a coordinated effort to create hundreds of thousands of jobs in order to produce tests, test every single person in this country, and contact trace every person who tests positive. This board would be in
-          place to address any future crises, so we never have to repeat our current shortfallings. It will save lives and livelihoods.
+          We need the Pandemic Testing Board–a coordinated effort to create hundreds of thousands of jobs in order to
+          produce tests, test every single person in this country, and contact trace every person who tests positive.
+          This board would be in
+          place to address any future crises, so we never have to repeat our current shortfallings. It will save lives
+          and livelihoods.
 
           So how can we make this vision become reality?
         </div>
       </div>
-      <div class="body-text mt-5"><b>One:</b> We have to tell our representatives we REALLY want this. Let's make it clear that this action is in everyone’s interest–economically, socially, and importantly, for our well-being. Use the search tool
+      <div class="body-text mt-5"><b>One:</b> We have to tell our representatives we REALLY want this. Let's make it
+        clear that this action is in everyone’s interest–economically, socially, and importantly, for our well-being.
+        Use the search tool
         below to find government officials in your area you can contact.</div>
     </section>
   </div>
@@ -98,29 +135,41 @@
       If you're unsure where to start, we've put together a sample script for what to say to your representatives.
       <div class="jumbotron my-2">
         <i>
-          “Hi there. My name is ______, and I am from ______. I am reaching out to request that you declare support for the creation of a national Pandemic Testing Board, such as the one presented in the Harvard ROADMAP TO PANDEMIC RESILIENCE, a
-          proposal for Massive Scale Testing, Tracing, and Supported Isolation. This proposal calls for hundreds of thousands of jobs to be created in order to successfully produce and carry out tests, contact trace individuals who test positive, and
-          provide spaces for safe isolation. I hope you support this action, as we have seen ample proof that it is the only adequate solution to save lives and restart our economy, sooner rather than later. As Nobel laureate economist Paul Romer
-          describes, getting to 35 million tests per day would cost around $100 billion. It’s a steep price tag, but a fraction of the $350 billion or so in monthly economic losses due to the ongoing lockdowns and social distancing measures in the
-          United States. With your support, we can save lives and livelihoods. I sincerely hope you make the right decision. Take care! :)</i>
+          “Hi there. My name is ______, and I am from ______. I am reaching out to request that you declare support for
+          the creation of a national Pandemic Testing Board, such as the one presented in the Harvard ROADMAP TO
+          PANDEMIC RESILIENCE, a
+          proposal for Massive Scale Testing, Tracing, and Supported Isolation. This proposal calls for hundreds of
+          thousands of jobs to be created in order to successfully produce and carry out tests, contact trace
+          individuals who test positive, and
+          provide spaces for safe isolation. I hope you support this action, as we have seen ample proof that it is the
+          only adequate solution to save lives and restart our economy, sooner rather than later. As Nobel laureate
+          economist Paul Romer
+          describes, getting to 35 million tests per day would cost around $100 billion. It’s a steep price tag, but a
+          fraction of the $350 billion or so in monthly economic losses due to the ongoing lockdowns and social
+          distancing measures in the
+          United States. With your support, we can save lives and livelihoods. I sincerely hope you make the right
+          decision. Take care! :)</i>
       </div>
 
     </div>
     [graphic]
     <div class="body-text my-5">
-      <b>Two:</b> We have to spread the word. Everyone knows the word “Coronavirus,” and now everyone needs to know and love the phrase “Pandemic Testing Board.”</div>
-      [share buttons]
-      <div class="body-text my-5">
-      <b>Three:</b> We have to bring people in. It’s not enough to make a phone call, or post about something once and then call it a day. If we are going to build a movement, it begins with face-to-face, real interaction. We have to start with those closest to us–those who trust and care for us, and bring them alongside our movement.
-      </div>
-      [graphics]
-      <div class="body-text my-5">This plan is ambitious, but the moment demands it. And the best way to meet such ambitious demands is with a strong, people-powered, unified voice calling to take care of and love every single person in this country.
-We. Can. Do. This.
-
-</div>
+      <b>Two:</b> We have to spread the word. Everyone knows the word “Coronavirus,” and now everyone needs to know and
+      love the phrase “Pandemic Testing Board.”</div>
+    [share buttons]
+    <div class="body-text my-5">
+      <b>Three:</b> We have to bring people in. It’s not enough to make a phone call, or post about something once and
+      then call it a day. If we are going to build a movement, it begins with face-to-face, real interaction. We have to
+      start with those closest to us–those who trust and care for us, and bring them alongside our movement.
     </div>
+    [graphics]
+    <div class="body-text my-5">This plan is ambitious, but the moment demands it. And the best way to meet such
+      ambitious demands is with a strong, people-powered, unified voice calling to take care of and love every single
+      person in this country.
+      We. Can. Do. This.
 
-
+    </div>
+  </div>
 
   <!--FOOTER-->
   <div class="container-flex" style="background-color: #88CCF1; height: 200px; overflow: hidden;">

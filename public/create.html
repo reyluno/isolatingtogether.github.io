@@ -224,7 +224,8 @@
         var urlList = [];
 
         // Add each image's url to a list
-        res.items.forEach(function (itemRef) {
+        res.items.forEach(function (artistRef) {
+          artistRef
           itemRef.getDownloadURL().then(function (url) {
             // Add image 1-by-1 to image grid
             addImage(url);
