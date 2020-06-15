@@ -65,10 +65,6 @@ label {
   font-weight: 500;
 }
 
-.action-title {
-  font: 3em 'Open Sans'600;
-  color: #dec0f1;
-}
 
 .btn-primary {
   background-color: #88CCF1;
@@ -93,7 +89,7 @@ h6 {
   text-transform: uppercase;
 }
 a {
-  color: #fff;
+  color: #88CCF1;
   transition: 0.3s;
 }
 a:hover {

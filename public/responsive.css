@@ -1,0 +1,56 @@
+@media only screen and (max-width: 600px) {
+  .navbar-toggler {
+    border: none;
+    color: #fff;
+    opacity: 1;
+  }
+
+  .navbar-toggler:active {
+    border: none;
+  }
+
+  .navbar-toggler:active {
+    color: #fff;
+    border: none;
+    opacity: 1;
+  }
+
+  .title {
+    font-size: 3em;
+  }
+
+  .subtitle {
+    font-size: 1em;
+  }
+  .bg {
+  height: 100%;
+  object-fit: cover;
+  }
+
+  .section-header {
+    font-size: 2em;
+  }
+  .body-text {
+    font-size: 1em;
+  }
+
+  .page-header {
+    text-align: center;
+  }
+
+  .action-item {
+    font-size: 2em;
+    line-height: 1.0;
+  }
+  .form-control {
+    width: auto;
+  }
+  .btn {
+    margin-left: 10px;
+  }
+
+  .name {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+}

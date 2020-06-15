@@ -97,6 +97,9 @@ body, html {
   opacity: .5;
 }
 
+.action-item {
+  font-size: 4em;
+}
 #scroll a {
   padding-top: 60px;
 }

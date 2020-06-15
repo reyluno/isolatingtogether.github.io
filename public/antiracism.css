@@ -3,22 +3,27 @@ body, html {
 }
 
 .title {
-  font: 10em 'Covered By Your Grace';
-  color: #1f1f1f;
+  font: 4em 'Covered By Your Grace';
+  color: #fff;
   line-height: 0.8;
   margin: 0.3em 0;
 }
 
+.name {
+  font: 700 6em/1.0 'Open Sans';
+  color: #fff;
+}
+
 .bg {
   max-width: 100%;
-  opacity: 0.15;
+  opacity: 0.2;
   position: absolute;
   overflow: hidden;
   z-index: 0;
 }
 
 .bg-overlay {
-  background-color: #fff;
+  background-color: #1f1f1f;
   opacity: 1;
   height: 100%;
   width: 100%;
@@ -35,20 +40,31 @@ body, html {
   font-weight: 500;
 }
 
+.body-text::before {
+  content: "";
+}
+
+.body-text::after {
+  content: "";
+}
+
 .section-header {
   font-family: 'Open Sans';
   font-weight: 700;
   font-size: 50px;
-  color: #DEC0F1;
+  color: #88ccf1;
 }
 
+.jumbotron {
+  background-color: #F8F8F8;
+}
 hr.new3 {
   border-top: 10px dotted #DEC0F1;
 }
 
 .subtitle {
-  font: 1.5em 'Open Sans';
-  color: #1f1f1f;
+  font: 200 1.5em 'Open Sans';
+  color: #fff;
 }
 
 .arrow a {
@@ -59,7 +75,7 @@ hr.new3 {
   display: inline-block;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
-  color: #1f1f1f;
+  color: #fff;
   font : normal 400 20px/1 'Josefin Sans', sans-serif;
   letter-spacing: .1em;
   text-decoration: none;
@@ -79,8 +95,8 @@ hr.new3 {
   width: 24px;
   height: 24px;
   margin-left: -12px;
-  border-left: 1px solid #1f1f1f;
-  border-bottom: 1px solid #1f1f1f;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: sdb04 2s infinite;
@@ -156,7 +172,7 @@ hr.new3 {
 }
 .card {
   border: none;
-  height: auto;
+  height: 400px;
   border-radius: 0;
   overflow: hidden;
   margin: 0 1em;
@@ -196,9 +212,6 @@ h6 {
   color: #fff;
 }
 
-a {
-  color: #1f1f1f;
-}
 a:hover {
   text-decoration: none;
 }

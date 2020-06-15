@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--JQuery-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <!--Bootstrap/CSS Import-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="antiracism.css" class="rel">
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+  <!--Tab Title-->
+  <title>Fight Together</title>
+</head>
+
+<body>
+  <!--NAVBAR-->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm" style="background-color: #88CCF1; padding: 1.2em 2em;">
+    <a class="navbar-brand" href="index.html"><img src="img/LogoWhite_Small.png" style="height: 60px; width: auto;"></a>
+    </button>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="act.html">Act<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="create.html">Create</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="inspire.html">Inspire</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="contact.html">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container-flex vh-100 vw-100 position-relative cn">
+    <div class="bg-overlay"><img src="img/blm.jpg" class="bg" alt="Responsive image"></div>
+    <div class="container mx-auto">
+      <div class="name">Fighting Racism in Healthcare</div>
+      <div class="subtitle">The fight is about more than just accessibility.</div>
+
+      <!-- NOTE: i can't get this stupid script to scroll smoothly -->
+      <script>
+        $(function() {
+          $('a[href*=\\#]').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+              scrollTop: $($(this).attr('href')).offset().top
+            }, 500, 'linear');
+          });
+        });
+      </script>
+
+      <section id="scroll" class="arrow">
+        <a href="#info"><span></span></a>
+      </section>
+
+    </div>
+  </div>
+
+  <section id="info">
+    <div class="container mt-5">
+      <div class="section-header my-3">
+        Health Inequality in the US
+      </div>
+      <div class="body-text">
+        It is said that when White people get a cold, Black people get pneumonia. History–and our present day–has borne that out. But where does this inequality stem from? Well, the common denominator is racism. From how White colonizers relied on <a
+          href="https://www.nytimes.com/interactive/2019/08/14/magazine/racial-differences-doctors.html" target="_blank">completely false suppositions</a> of Black people’s pain tolerance to justify slavery, to the fact that even today, doctors
+        provide unequal treatment to Black patients due to pervading <a href="https://www.aamc.org/news-insights/how-we-fail-black-patients-pain" target="_blank">racial biases</a>, medical racism has quite literally taken millions of lives and
+        livelihoods.
+        <br><br>Ultimately, these racist beliefs have built a broader racist system that perpetuates itself in so many ways. White opioid users have been treated much <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5121004/"
+          target="_blank">more sympathetically</a> by the media–and consequently through policy–than Black and Latino heroin users. Communities of color suffer from a <a href="https://newsinteractive.post-gazette.com/longform/stories/poorhealth/1/"
+          target="_blank">scarcity of doctors & hospitals</a> while toxic facilities, the product of historical zoning discrimination, litter their neighborhoods. Relatively weak means of <a
+          href="https://news.umich.edu/targeting-minority-low-income-neighborhoods-for-hazardous-waste-sites/" target="_blank">resisting corporate interests</a> leave residents of these communities with worse-off hospital systems and factories
+        spewing unhealthy toxins in the air. Brutalistic and racist police forces<a href="https://www.sentencingproject.org/publications/un-report-on-racial-disparities/" target="_blank">disproportionately criminalize and punish</a> people of
+        color–especially Black people–naturally resulting in outsized and generational mental and physical harm.
+      </div>
+  </section>
+
+  <div class="container mt-5">
+    <div class="body-text">The confluence of these and many more factors leads us to today, when communities of color are being <a href="https://medicalxpress.com/news/2020-05-covid-assault-black-brown.html" target="_blank">disproportionately impacted</a> by the COVID-19 crisis. When communities have historically been underfunded, given unequal
+      medical care & political attention, and have factories that spew toxins that contribute to respiratory diseases such as asthma, it is no surprise that these communities would consequently face higher risks to a respiratory virus.</div>
+  </div>
+  <div class="container my-5">
+    <div class="section-header my-3">Work for Better</div>
+    <div class="body-text">Given the devastating impacts of systemic racism in health outcomes, we have to commit to being anti-racist. Proclaiming ourselves as “not racist,” means nothing, as it promises no action to overturn our own potential
+      racist biases, let alone our harmful racist structures. Moreover, we can’t just work to overturn racist or unequal structures, we must also foster new cooperation and egalitarianism: a system of true social–and therefore medical–justice. This
+      spirit is fostered both through the on-the-ground <a href="act.html" target="_blank">action we can take,</a> and the broader collectivist projects we pursue–like the Pandemic Testing Board (link to Pandemic Testing Board page). We demand that
+      our broader policy goals align with the visions outlined by the Movement for Black Lives’ National Demands for COVID-19.
+
+    </div>
+
+  </div>
+  <div class="container-flex my-5">
+    <div class="container my-5">
+      <div class="section-header my-3">Action Items</div>
+      <div class="body-text">
+        So, how can we act?
+        <ul>
+          <li>Voice your support for the <a href="A1.html" target="_blank">Pandemic Testing Board</a></li>
+          <li>Support organizations specifically working to support communities impacted worst by the COVID-19 crisis:</li>
+          <ul>
+            <li><a href="https://www.covidbailout.org/" target="_blank">COVID Bailout</a></li>
+            <li><a href="https://www.gofundme.com/f/covid19-protest-relief-fund?utm_source=customer&utm_campaign=p_cp+share-sheet&utm_medium=copy_link-tip" target="_blank">Protest Relief Fund</a></li>
+            <li><a href="https://givingcompass.org/fund/asian-pacific-environmental-network-covid-19-emergency-community-fund/" target="_blank">Asian Pacific Environmental Network</a></li>
+            <li><a href="https://secure.actblue.com/donate/emergent-peoples-bailout" target="_blank">Emergent Fund: People's Bailout</a></li>
+            <li><a href="https://www.grapevine.org/c/3y6hD5/Liberated-Capital-A-Decolonizing-Wealth-Fund/home" target="_blank">Liberated Capital</a></li>
+            <li><a href="https://hiponline.org/hip-covid-19-rapid-response-migration-fund-funder-note/" target="_blank">Rapid Response Migration Fund</a></li>
+          </ul>
+          <li><a href="act.html" target="_blank">Volunteer</a> in your community, or support other communities from afar–there’s lots of people who are in urgent need of our help in every community across the country</li>
+          <li>Voice your support for defunding militarized police departments, so our communities can shift these bloated budgets to fund resources such as hospitals, mental health care facilities, community and social centers, and more–resources
+            that care for and strengthen us. <a href="https://www.collectiveforaboliton.org/" target="_blank">Learn more</a> about the logic, scholarship, and visions that illustrate the need for this shift.</li>
+        </ul>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+  <!--FOOTER-->
+  <div class="container-flex" style="background-color: #88CCF1; height: 200px; overflow: hidden;">
+    <div class="row" style="margin-top: 2%;">
+      <div class="col-2"></div>
+      <div class="col-2">
+        <h6><b>Isolating Together</b></h6>
+        <a href="act.html">
+          <h6>Act</h6>
+        </a>
+        <a href="create.html">
+          <h6>Create</h6>
+        </a>
+        <a href="inspire.html">
+          <h6>Inspire</h6>
+        </a>
+      </div>
+      <div class="col-2"></div>
+      <div class="col-2">
+        <a href="about.html">
+          <h6>About</h6>
+        </a>
+        <a href="contact.html">
+          <h6>Contact</h6>
+        </a>
+        <a href="#">
+          <h6>Twitter</h6>
+        </a>
+        <a href="#">
+          <h6>Instagram</h6>
+        </a>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+</body>
+
+</html>
