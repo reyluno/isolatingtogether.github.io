@@ -36,7 +36,8 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm"
       style="background-color: #FFA69E; padding: 1.2em 2em;">
 
-      <a class="navbar-brand" href="index.html"><img src="img/LogoWhite_Small.png"
+      <a class="navbar-brand" href="index.html"><img
+          src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/LogoWhite_Small.png"
           style="height: 60px; width: auto;"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
         aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -180,7 +181,8 @@
     <div class="col">
       <div class="card">
         <a id="temp-link" href="">
-          <img id="temp-img" class="card-img-top" src="img/helper.jpg" alt="Card image cap">
+          <img id="temp-img" class="card-img-top"
+            src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/helper.jpg" alt="Card image cap">
           <div class="card-body">
             <h5 id="temp-title" class="card-title"></h5>
         </a>
@@ -344,14 +346,14 @@
         var tag = item["Type"];
 
         if (tag == "Mutual Aid") {
-          img.src = "img/act/mutualAid.jpeg";
+          img.src = "https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/act/mutualAid.jpeg";
         } else if (tag == "Donate") {
           img.src =
-            "https://raw.githubusercontent.com/reyluno/isolatingtogether.github.io/firebase-setup/public/img/act/donation.jpeg";
+            "https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/act/donation.jpeg";
         } else if (tag == "Volunteer") {
-          img.src = "img/act/volunteer.jpg";
+          img.src = "https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/act/volunteer.jpg";
         } else if (tag == "Central Resource") {
-          img.src = "img/act/centralResource.jpeg";
+          img.src = "https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/act/centralResource.jpeg";
         }
       }
 
@@ -362,7 +364,7 @@
         location.innerText = item["Location"];
       }
 
-      //Update Img/Title Link
+      //Update https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/Title Link
       if (item.hasOwnProperty("Link")) {
         var anchor = clone.getElementById("temp-link");
         anchor.id += index;
