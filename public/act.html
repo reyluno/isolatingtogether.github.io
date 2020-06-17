@@ -6,14 +6,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!--JQuery-->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-  <!--XLSX Reader-->
-  <script type="text/javascript" lang="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.full.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
   <!--Bootstrap/CSS Import-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
   <link rel="stylesheet" href="act.css" class="rel">
   <link rel="stylesheet" href="responsive.css" class="rel">
@@ -21,7 +23,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
   <!--Tab Title-->
   <title>Act Together</title>
 </head>
@@ -29,10 +33,13 @@
 <body>
   <div class="container-flex">
     <!--NAVBAR-->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm" style="background-color: #FFA69E; padding: 1.2em 2em;">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm"
+      style="background-color: #FFA69E; padding: 1.2em 2em;">
 
-      <a class="navbar-brand" href="index.html"><img src="img/LogoWhite_Small.png" style="height: 60px; width: auto;"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand" href="index.html"><img src="img/LogoWhite_Small.png"
+          style="height: 60px; width: auto;"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -69,7 +76,6 @@
         <div class="col">
           <select id="state_zip_input" class="form-control" placeholder="State or ZIP">
 
-            <option>All States</option>
             <option value="Alabama">Alabama</option>
             <option value="Alaska">Alaska</option>
             <option value="Arizona">Arizona</option>
@@ -102,7 +108,7 @@
             <option value="New Hampshire">New Hampshire</option>
             <option value="New Jersey">New Jersey</option>
             <option value="New Mexico">New Mexico</option>
-            <option value="New York">New York</option>
+            <option value="New York" selected>New York</option>
             <option value="North Carolina">North Carolina</option>
             <option value="North Dakota">North Dakota</option>
             <option value="Ohio">Ohio</option>
@@ -123,7 +129,8 @@
             <option value="Wyoming">Wyoming</option>
           </select>
         </div>
-        <div class="col col-lg-2"><input class="btn btn-primary" onclick="entry(document.getElementById('state_zip_input').value)" type="submit" value="Filter"></div>
+        <div class="col col-lg-2"><input class="btn btn-primary"
+            onclick="entry(document.getElementById('state_zip_input').value)" type="submit" value="Filter"></div>
       </div>
     </div>
   </div>
@@ -185,6 +192,9 @@
     </div>
   </template>
 
+  <!--XLSX Reader-->
+  <script type="text/javascript" lang="javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.full.min.js"></script>
   <script>
     // set our variables
     const filePath = "./data/States.xlsx";
@@ -192,12 +202,12 @@
 
     function importFile(state) {
       // use loading function to get file from server-side
-      fetch(filePath).then(function(res) {
+      fetch(filePath).then(function (res) {
           // data as arraybuffer
           if (!res.ok) throw new Error("importing failed");
           return res.arrayBuffer();
         })
-        .then(function(ab) {
+        .then(function (ab) {
           // received data async. now parse ab = ArrayBuffer
           var data = new Uint8Array(ab);
           var workbook = XLSX.read(data, {
@@ -284,13 +294,13 @@
         console.log(tag);
 
         if (tag == "Mutual Aid") {
-          img.src = "img/mask.jpg";
+          img.src = "img/act/mutualAid.jpeg";
         } else if (tag == "Donate") {
-          img.src = "img/inspire.jpg";
+          img.src = "img/act/donation.jpeg";
         } else if (tag == "Volunteer") {
-          img.src = "img/statue.jpg";
+          img.src = "img/act/volunteer.jpg";
         } else if (tag == "Central Resource") {
-          img.src = "img/helper.jpg";
+          img.src = "img/act/centralResource.jpeg";
         }
       }
 

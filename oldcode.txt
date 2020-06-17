@@ -1,0 +1,30 @@
+// This function is created using https://firebase.google.com/docs/storage/web/list-files
+function displayAll() {
+// Get a reference to the storage service, which is used to create references in your storage bucket
+var storage = firebase.storage();
+
+var auth = firebase.auth();
+var storageRef = firebase.storage().ref();
+// Creates a reference to directory containing user's images
+var listRef = storageRef.child('images');
+
+// This lists all images in referenced directory
+listRef.listAll().then(function (res) {
+var urlList = [];
+
+// Add each image's url to a list
+res.items.forEach(function (artistRef) {
+artistRef
+itemRef.getDownloadURL().then(function (url) {
+// Add image 1-by-1 to image grid
+addImage(url);
+});
+});
+}).catch(function (error) {
+console.log(error.message);
+});
+}
+
+window.onload = function () {
+//displayAll();
+for (var i = 0; i < 9; i++) { addImage("img/helper.jpg", "Title by Author here" ); } }

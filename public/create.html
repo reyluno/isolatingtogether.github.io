@@ -35,13 +35,12 @@
 </head>
 
 <body>
-
-
-
   <!--NAVBAR-->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm" style="background-color: #88D18A; padding: 1.2em 2em;">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm"
+    style="background-color: #88D18A; padding: 1.2em 2em;">
     <a class="navbar-brand" href="index.html"><img src="img/LogoWhite_Small.png" style="height: 60px; width: auto;"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -75,54 +74,21 @@
       <div class="col">
         <div class="circle-container  desktop-only">
           <!--Upload-->
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgGi2v-9GS57D_cb2K-nwdyOCPcJe0wDQCTbkwKpLormb5Xg/viewform" target="_blank"><div class="circle"><i class="material-icons" style="font-size:30px; color: #fff;">add</i></div></a>
-          <!--Filters-->
-          <div class="circle"><i class="material-icons" style="font-size:25px; color: #fff;">search</i></div>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdgGi2v-9GS57D_cb2K-nwdyOCPcJe0wDQCTbkwKpLormb5Xg/viewform"
+            target="_blank">
+            <div class="circle"><i class="material-icons" style="font-size:30px; color: #fff;">add</i></div>
+          </a>
+          <!--Filter-->
+          <!-- <div class="circle"><i class="material-icons" style="font-size:25px; color: #fff;">search</i></div> -->
           <!--Scroll to Top Script-->
-          <div class="circle"><i class="material-icons" style="color: #fff;">arrow_upward</i></div>
-
+          <!-- <div class="circle"><i class="material-icons" style="color: #fff;">arrow_upward</i></div> -->
         </div>
       </div>
     </div>
   </div>
 
-  <!-- NOTE: Grid Layout -->
-  <div id="grid" class="container" style="margin-top: 200px; margin-bottom: 150px;">
-    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-    <!-- <div class="row">
-      <div class="col-6 col-md-8">
-        <img src="img/helper.jpg" class="img-fluid">
-      </div>
-      <div class="col-6 col-md-4">
-        <img src="img/helper.jpg" class="img-fluid">
-      </div> -->
-
-    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-    <!-- <div class="row">
-      <div class="col-6 col-md-4">
-        <img src="img/helper.jpg" class="img-fluid">
-        <div class="caption text-center">Title by Author here</div>
-      </div>
-      <div class="col-6 col-md-4">
-        <img src="img/helper.jpg" class="img-fluid">
-        <div class="caption text-center">Title by Author here</div>
-      </div>
-      <div class="col-6 col-md-4">
-        <img src="img/helper.jpg" class="img-fluid">
-        <div class="caption text-center">Title by Author here</div>
-      </div>
-    </div> -->
-
-    <!-- Columns are always 50% wide, on mobile and desktop -->
-    <!-- <div class="row">
-      <div class="col-6">
-        <div class="placeholder"></div>
-      </div>
-      <div class="col-6">
-        <div class="placeholder"></div>
-      </div>
-    </div> -->
-  </div>
+  <!-- Grid Layout -->
+  <div id="grid" class="container" style="margin-top: 200px; margin-bottom: 150px;"></div>
 
   <!--FOOTER-->
   <div class="container-flex" style="background-color: #88D18A; height: 200px; overflow: hidden;">
@@ -162,24 +128,9 @@
     </div>
   </div>
 
-
-  <script>
-    var container = document.getElementById("grid");
-    var rows = container.children;
-
-    //iterate through rows
-    for (var i = 0; i < rows.length; i++) {
-      //iterate through children (image placeholders)
-      var row = rows[i];
-      for (var x = 0; x < row.children.length; x++) {
-        console.log("yo");
-      }
-    }
-  </script>
-
   <script src="/__/firebase/7.14.4/firebase-app.js"></script>
-  <script src="/__/firebase/7.14.4/firebase-auth.js"></script>
-  <script src="/__/firebase/7.14.4/firebase-storage.js"></script>
+  <!-- <script src="/__/firebase/7.14.4/firebase-auth.js"></script> -->
+  <!-- <script src="/__/firebase/7.14.4/firebase-storage.js"></script> -->
   <script src="/__/firebase/init.js"></script>
 
   <script>
@@ -223,39 +174,7 @@
       currLen++;
     }
 
-    // This function is created using https://firebase.google.com/docs/storage/web/list-files
-    function displayAll() {
-      // Get a reference to the storage service, which is used to create references in your storage bucket
-      var storage = firebase.storage();
-
-      var auth = firebase.auth();
-      var storageRef = firebase.storage().ref();
-      // Creates a reference to directory containing user's images
-      var listRef = storageRef.child('images');
-
-      // This lists all images in referenced directory
-      listRef.listAll().then(function (res) {
-        var urlList = [];
-
-        // Add each image's url to a list
-        res.items.forEach(function (artistRef) {
-          artistRef
-          itemRef.getDownloadURL().then(function (url) {
-            // Add image 1-by-1 to image grid
-            addImage(url);
-          });
-        });
-      }).catch(function (error) {
-        console.log(error.message);
-      });
-    }
-
-    window.onload = function () {
-      //displayAll();
-      for (var i = 0; i < 9; i++) {
-        addImage("img/helper.jpg", "Title by Author here");
-      }
-    }
+    //Code to display all images from hosting folder
   </script>
 </body>
 
