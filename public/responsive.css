@@ -17,6 +17,7 @@
 
   .title {
     font-size: 3em;
+    padding: 10px;
   }
 
   .subtitle {
@@ -32,6 +33,7 @@
   }
   .body-text {
     font-size: 1em;
+    padding: 10px;
   }
 
   .page-header {
@@ -52,5 +54,17 @@
   .name {
     font-size: 3em;
     margin-bottom: 10px;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .spacer {
+    height: 130px;
+  }
+
+  h6 {
+    font-size: 0.8em;
   }
 }

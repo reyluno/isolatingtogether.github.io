@@ -15,6 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
   <link rel="stylesheet" href="antiracism.css" class="rel">
+  <link rel="stylesheet" href="responsive.css" class="rel">
   <!--Fonts-->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
@@ -25,26 +26,32 @@
 <body>
   <!--NAVBAR-->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm" style="background-color: #88CCF1; padding: 1.2em 2em;">
+
     <a class="navbar-brand" href="index.html"><img src="img/LogoWhite_Small.png" style="height: 60px; width: auto;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="act.html">Act<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="create.html">Create</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="inspire.html">Inspire</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="about.html">About</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="contact.html">Contact</a>
-      </li>
-    </ul>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="act.html">Act</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="create.html">Create</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="inspire.html">Inspire</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
   </nav>
+
   <div class="container-flex vh-100 vw-100 position-relative cn">
     <div class="bg-overlay"><img src="img/blm.jpg" class="bg" alt="Responsive image"></div>
     <div class="container mx-auto">
