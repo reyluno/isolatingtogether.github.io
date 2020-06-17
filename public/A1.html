@@ -9,21 +9,26 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <!--Bootstrap/CSS Import-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
-  <link rel="stylesheet" href="A1.css" class="rel">
-  <link rel="stylesheet" href="responsive.css" class="rel">
+  <link rel="stylesheet" href="css/A1.css" class="rel">
+  <link rel="stylesheet" href="css/responsive.css" class="rel">
   <!--Fonts-->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
 
   <!-- Load Facebook SDK for JavaScript -->
   <div id="fb-root"></div>
   <script>
-    (function(d, s, id) {
+    (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s);
@@ -39,9 +44,11 @@
 
 <body>
   <!--NAVBAR-->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm" style="background-color: #88CCF1; padding: 1.2em 2em;">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm"
+    style="background-color: #88CCF1; padding: 1.2em 2em;">
     <a class="navbar-brand" href="index.html"><img src="img/LogoWhite_Small.png" style="height: 60px; width: auto;"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -75,8 +82,8 @@
       <div class="name">The Pandemic Testing Board</div>
       <div class="subtitle">Jobs, Testing, and Tracing.</div>
       <script>
-        $(function() {
-          $('a[href*=#]').on('click', function(e) {
+        $(function () {
+          $('a[href*=#]').on('click', function (e) {
             e.preventDefault();
             $('html, body').animate({
               scrollTop: $($(this).attr('href')).offset().top
@@ -91,8 +98,8 @@
 
     </div>
   </div>
-    <section id="more">
-  <div class="container mt-5">
+  <section id="more">
+    <div class="container mt-5">
 
       <div class="row">
         <div class="col">[chart]</div>
@@ -113,13 +120,14 @@
         Use the search tool
         below to find government officials in your area you can contact.</div>
 
-  </div>
-    </section>
+    </div>
+  </section>
   <div class="container-flex mt-5" style="background-color: #88CCF1;">
     <div class="container">
       <div class="body-text py-5">
         <!-- Resistbot chatbot code -->
-        <div class="fb-customerchat" page_id="1224106861035505" theme_color="#0084ff" logged_in_greeting="Say &ldquo;resist&rdquo; and I'll help you write to your officials!"
+        <div class="fb-customerchat" page_id="1224106861035505" theme_color="#0084ff"
+          logged_in_greeting="Say &ldquo;resist&rdquo; and I'll help you write to your officials!"
           logged_out_greeting="Say &ldquo;resist&rdquo; and I'll help you write to your officials!">
         </div>
       </div>
