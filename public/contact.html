@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!--JQuery-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <!--Bootstrap/CSS Import-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="contact.css" class="text/css">
+  <link rel="stylesheet" href="responsive.css" class="rel">
+  <!--Fonts-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+  <!--Tab Title-->
+  <title>Isolating Together</title>
+</head>
+
+<body>
+  <!--LANDING PAGE-->
+  <!--NAVBAR-->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm" style="background-color: #88CCF1; padding: 1.2em 2em;">
+
+    <a class="navbar-brand" href="index.html"><img src="img/LogoWhite_Small.png" style="height: 60px; width: auto;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="act.html">Act</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="create.html">Create</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="inspire.html">Inspire</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="antiracism.html">Anti-Racism</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container vh-100 cn">
+    <!--Section: Contact v.2-->
+    <section class="my-5">
+      <!--Section heading-->
+      <h2 class="title h1-responsive font-weight-bold my-4">Contact Us</h2>
+      <!--Section description-->
+      <p class="subtitle w-responsive mx-auto mb-5">If you have ideas on how to help us accomplish our mission, feel
+        free to reach out to us <a href="mailto:isolatogether@gmail.com">via email.</a></p>
+      <!--<div class="row">
+
+        <div class="col-md-9 mb-md-0 mb-5">
+          <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+            <div class="row">
+
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input type="text" id="name" name="name" class="form-control">
+                  <label for="name" class="">Name</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input type="text" id="email" name="email" class="form-control">
+                  <label for="email" class="">Email</label>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="md-form mb-0">
+                  <input type="text" id="subject" name="subject" class="form-control">
+                  <label for="subject" class="">Subject</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="col-md-12">
+
+                <div class="md-form">
+                  <textarea type="text" id="message" name="message" rows="2"
+                    class="form-control md-textarea"></textarea>
+                  <label for="message">Message</label>
+                </div>
+
+              </div>
+            </div>
+
+
+          </form>
+
+
+          <div class="text-center text-md-left">
+            <a class="btn btn-primary" onclick="submit()">
+              Send</a>
+          </div>
+          <div class="status"></div>
+        </div>
+-->
+
+      </div>
+
+    </section>
+    <!--Section: Contact v.2-->
+  </div>
+  <!--FOOTER-->
+  <!-- NOTE: and also colors here and the text is in the css file -->
+  <div class="container-flex" style="background-color: #88CCF1; height: 200px; overflow: hidden;">
+    <div class="row" style="margin-top: 2%;">
+      <div class="col-2"></div>
+      <div class="col-2">
+        <h6><b>Isolating Together</b></h6>
+        <a href="act.html">
+          <h6>Act</h6>
+        </a>
+        <a href="create.html">
+          <h6>Create</h6>
+        </a>
+        <a href="inspire.html">
+          <h6>Inspire</h6>
+        </a>
+      </div>
+      <div class="col-2"></div>
+      <div class="col-2">
+        <a href="about.html">
+          <h6>About</h6>
+        </a>
+        <a href="contact.html">
+          <h6>Contact</h6>
+        </a>
+        <a href="#">
+          <h6>Twitter</h6>
+        </a>
+        <a href="#">
+          <h6>Instagram</h6>
+        </a>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/7.14.5/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+  </script>
+</body>
+
+</html>

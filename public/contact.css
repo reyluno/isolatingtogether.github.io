@@ -1,0 +1,105 @@
+body, html {
+  overflow-x: hidden;
+}
+
+.snap {
+  scroll-snap-type: y mandatory;
+}
+
+.child {
+  scroll-snap-align: start;
+}
+.nav-link {
+  font-family: 'Open Sans';
+  font-size: 1.1em;
+  margin: 0 0.7em;
+}
+
+
+.cn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.lead {
+  letter-spacing: 0.2em;
+  font-family: 'Open Sans';
+  font-size: 1em;
+  font-weight: 200;
+  color: #fff;
+  opacity: 0.6;
+}
+
+.title {
+  font: 6.5em 'Covered By Your Grace';
+  color: #88CCF1;
+  line-height: 0.8;
+  margin: 0.5em 0;
+}
+
+.subtitle {
+  font: 1.0em 'Open Sans';
+  color: #1f1f1f;
+}
+
+label {
+  text-transform: uppercase;
+  font-family: 'Open Sans';
+  opacity: 0.5;
+  padding: 5px;
+}
+.section-header {
+  font-family: 'Open Sans';
+  font-weight: 700;
+  font-size: 50px;
+  color: #88CCF1;
+}
+
+.body-text {
+  font: 1.2em 'Open Sans';
+  text-align: left;
+  line-height: 1.4;
+  color: #1f1f1f;
+  font-weight: 500;
+}
+
+
+.btn-primary {
+  background-color: #88CCF1;
+  border: none;
+  border-radius: 40%/60%;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #3597CC;
+}
+
+.form-control::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+
+h6 {
+  color: #fff;
+  padding: 5px;
+  text-transform: uppercase;
+}
+a {
+  color: #88CCF1;
+  transition: 0.3s;
+}
+a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.divider {
+  width: 80%;
+  height: 1px;
+  background-color: #1f1f1f;
+  margin: 10px auto 20px auto;
+}

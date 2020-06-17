@@ -1,0 +1,9 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // can read from any path in google storage
+    match /{allPaths=**} {
+      allow read: if request.auth!=null;
+    }
+  }
+}
