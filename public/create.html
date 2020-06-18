@@ -146,7 +146,7 @@
       "ElianaRodgers2.jpg", "LukeBolster2.jpg", "RommelNunez2.jpg"
     ];
 
-    imgData.forEach(addimage);
+    imgData.forEach(addImage);
 
     //This function adds rows/images to grid as needed
     function addImage(url, index) {
@@ -169,13 +169,15 @@
       img.className = "img-fluid";
       imgDiv.appendChild(img);
 
-      // Create image caption if exists
-      if (captionText != null) {
-        var caption = document.createElement("div");
-        caption.className = "caption text-center";
-        caption.innerText = captionText;
-        imgDiv.appendChild(caption);
-      }
+      // Create Caption
+      var myRegexp = /^[A-Z][-a-z]+/
+      var firstName = myRegexp.exec(url);
+      var lastName = myRegexp.exec(url.substring(firstName[0].length, url.length));
+
+      var caption = document.createElement("div");
+      caption.className = "caption text-center";
+      caption.innerText = "Art by " + firstName + lastName;
+      imgDiv.appendChild(caption);
 
       // Append div to current row
       currRow.appendChild(imgDiv);
