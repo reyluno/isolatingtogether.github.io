@@ -3,12 +3,7 @@ var currLen = 0;
 var currRow;
 var container = document.getElementById("grid");
 var baseURL = "https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/create/";
-var imgData = ["AdeBalogun1.jpg", "ElianaRodgers3.jpg", "LukeBolster3.jpg", "RommelNunez3.jpg", "AdeBalogun2.jpg",
-    "FergusCampbell1.gif", "LukeBolster4.jpg", "RubaNadar1.jpeg", "AdeBalogun3.jpg", "GrantPace1.jpg",
-    "MadeleineMueller1.jpeg", "RubaNadar2.jpeg", "AshleyJiao1.png", "GrantPace2.png", "RobertHunter1.jpg",
-    "RubaNadar3.jpeg", "ElianaRodgers1.jpg", "KyleeDanks1.png", "RommelNunez1.jpg", "RubaNadar4.jpeg",
-    "ElianaRodgers2.jpg", "LukeBolster2.jpg", "RommelNunez2.jpg"
-];
+var imgData = ['AlbertGwo2.jpg', 'RommelNunez3.jpg', 'MadeleineMueller.jpeg', 'LukeBolster3.jpg', 'KyleeDanks1.png', 'RubaNadar1.jpeg', 'AdeBalogun2.jpg', 'AlbertGwo12.jpg', 'AlbertGwo11.jpg', 'ElianaRodgers3.jpg', 'RobertHunter.jpg', 'ElianaRodgers2.jpg', 'RubaNadar2.jpeg', 'CarlosOchoa1.jpg', 'RommelNunez1.jpg', 'AlbertGwo10.jpg', 'AlbertGwo4.jpg', 'GrantPace2.png', 'GrantPace1.jpg', 'LukeBolster4.jpg', 'AlbertGwo1.jpg', 'ElianaRodgers1.jpg', 'AlbertGwo5.jpg', 'AlbertGwo6.JPG', 'AdeBalogun3.jpg', 'RubaNadar4.jpeg', 'AlbertGwo9.jpg', 'AlbertGwo8.jpg', 'LukeBolster2.jpg', 'AlbertGwo7.jpg', 'CameronLee.jpg', 'RubaNadar3.jpeg', 'RommelNunez2.jpg', 'AdeBalogun1.jpg', 'FergusCampbell.gif', 'AshleyJiao.png', 'AlbertGwo3.jpg', 'LukeBolster1.jpeg'];
 
 imgData.forEach(addImage);
 
