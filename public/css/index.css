@@ -1,14 +1,8 @@
 body, html {
-  overflow-x: hidden;
+
 }
 
-.snap {
-  scroll-snap-type: y mandatory;
-}
 
-.child {
-  scroll-snap-align: start;
-}
 .nav-link {
   font-family: 'Open Sans';
   font-size: 1.1em;
@@ -19,7 +13,7 @@ body, html {
   opacity: 0.2;
   position: absolute;
   overflow: hidden;
-  z-index: 0;
+
 }
 
 .bg-overlay {
@@ -29,7 +23,7 @@ body, html {
   width: 100%;
   position: absolute;
   overflow: hidden;
-  z-index: -1;
+  z-index: -2;
 }
 
 .cn {
@@ -170,7 +164,7 @@ body, html {
 }
 
 .body-text {
-  font: 1.2em 'Open Sans';
+  font: 1.0em 'Open Sans';
   text-align: left;
   line-height: 1.4;
   color: #1f1f1f;
