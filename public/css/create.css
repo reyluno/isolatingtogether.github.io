@@ -29,6 +29,16 @@
   background-color: #e3e3e3;
 }
 
+.fa {
+  color: #fff;
+  padding: 10px;
+}
+
+.fa:hover {
+  color: #fff;
+  opacity: 0.6;
+}
+
 .placeholder-prose {
   width: 100%;
   padding-top: 48%;

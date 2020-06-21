@@ -47,6 +47,17 @@ body, html {
   color: #88ccf1;
 }
 
+.fa {
+  color: #fff;
+  padding: 10px;
+}
+
+.fa:hover {
+  color: #fff;
+  opacity: 0.6;
+}
+
+
 .jumbotron {
   background-color: #F8F8F8;
 }

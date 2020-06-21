@@ -28,6 +28,16 @@
   object-fit: cover;
   }
 
+  .fa {
+    color: #fff;
+    padding: 10px;
+  }
+
+  .fa:hover {
+    color: #fff;
+    opacity: 0.6;
+  }
+
   .section-header {
     font-size: 2em;
   }

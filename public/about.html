@@ -19,6 +19,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/about.css" class="rel">
   <link rel="stylesheet" href="css/responsive.css" class="rel">
   <!--Fonts-->
@@ -65,16 +66,49 @@
         </li>
 
       </ul>
+      <ul class="navbar-nav justify-content-end">
+        <li class="nav-item">
+          <a href="https://instagram.com/isolatogether?igshid=180zphtvw052e" class="fa fa-instagram" target="_blank"></a>
+        </li>
+        <li class="nav-item">
+          <a href="https://twitter.com/Isolatogether" class="fa fa-twitter" target="_blank"></a>
+        </li>
+        <li class="nav-item">
+          <a href="https://www.facebook.com/IsolatingTogether/?modal=admin_todo_tour" class="fa fa-facebook" target="_blank"></a>
+        </li>
+      </ul>
     </div>
   </nav>
 
-  <div class="container" style="margin-top: 150px">
-    <div class="spacer"></div>
-    <div class="title">about us</div>
+  <div class="container-flex vh-100 vw-100 position-relative cn">
+    <div class="bg-overlay"><img src="img/about.jpg" class="bg" alt="Responsive image"></div>
+    <div class="container mx-auto text-center">
+      <div class="title">about us</div>
+      <div class="subtitle"></div>
+
+      <!-- NOTE: i can't get this stupid script to scroll smoothly45 -->
+      <script>
+        $(function() {
+          $('a[href*=\\#]').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+              scrollTop: $($(this).attr('href')).offset().top
+            }, 500, 'linear');
+          });
+        });
+      </script>
+
+      <section id="scroll" class="arrow">
+        <a href="#about"><span></span></a>
+      </section>
+
+    </div>
+  </div>
+<section id="about">
+  <div class="container" style="margin-top: 50px">
     <div class="body-text">
       We are an <a href="antiracism.html">anti-racist</a>, not-for-profit organization fighting for love-based action in
-      the face of the COVID-19 crisis. We are a group of college students from across the country taking on the deep
-      cynicism, frustration, and pain ravaging our society. There are long-standing, structural issues in our nation
+      the face of the COVID-19 crisis. There are long-standing, structural issues in our nation
       that have led to our unequal, atomized response to this virus, issues reflected in the <a
         href="https://medicalxpress.com/news/2020-05-covid-assault-black-brown.html" target="_blank">specific
         populations Coronavirus disproportionately impacts.</a> We know we can do more to address this crisis, and to
@@ -114,7 +148,7 @@
       solidarity. <b>We can do this.</b>
     </div>
   </div>
-
+</section>
 
   <!--FOOTER-->
   <div class="container-flex" style="background-color: #88CCF1; height: 200px; overflow: hidden;">

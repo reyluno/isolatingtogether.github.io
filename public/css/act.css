@@ -21,7 +21,15 @@
   color: #1f1f1f;
   padding: 0;
 }
+.fa {
+  color: #fff;
+  padding: 10px;
+}
 
+.fa:hover {
+  color: #fff;
+  opacity: 0.6;
+}
 .body-text {
   font: 1.2em 'Open Sans';
   text-align: left;
