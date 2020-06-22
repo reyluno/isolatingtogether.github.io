@@ -29,16 +29,26 @@ def jsonFromCSV(name="submissionForm.csv"):
             if emailFlag == "Yes":
                 art["email"] = row[1]
 
-            art["artist"] = row[2]
-            art["url"] = row[3]
-            art["media"] = row[4]
-            art["title"] = row[5]
-            art["tags"] = row[6]
-            art["description"] = row[7]
-            art["website"] = row[8]
-            art["twitter"] = row[9]
-            art["instagram"] = row[10]
-            art["facebook"] = row[11]
+            if row[2] != "":
+                art["artist"] = row[2]
+            if row[3] != "":
+                art["url"] = row[3]
+            if row[4] != "":
+                art["media"] = row[4]
+            if row[5] != "":
+                art["title"] = row[5]
+            if row[6] != "":
+                art["tags"] = row[6]
+            if row[7] != "":
+                art["description"] = row[7]
+            if row[8] != "":
+                art["website"] = row[8]
+            if row[9] != "":
+                art["twitter"] = row[9]
+            if row[10] != "":
+                art["instagram"] = row[10]
+            if row[11] != "":
+                art["facebook"] = row[11]
 
     with open('create.json', 'w') as outfile:
         json.dump(createJSON, outfile)
