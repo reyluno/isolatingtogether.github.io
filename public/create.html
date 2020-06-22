@@ -118,7 +118,18 @@
           </button>
         </div>
         <img id="popupImg" class="img-fluid" alt="Responsive image">
-        <div id="popupBody" class="modal-body"></div>
+        <div id="popupMedia" class="modal-body"></div>
+        <div id="popupDescription" class="modal-body"></div>
+        <div id="popupArtist" class="modal-body"></div>
+        <div id="popupEmail" class="modal-body"></div>
+        <div id="popupWebsite" class="modal-body"></div>
+        <div id="popupTwitter" class="modal-body"></div>
+        <div id="popupInstagram" class="modal-body"></div>
+        <div id="popupFacebook" class="modal-body"></div>
+        <div id="popupTag1" class="modal-body"></div>
+        <div id="popupTag2" class="modal-body"></div>
+        <div id="popupTag3" class="modal-body"></div>
+
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-sm">Share</button>
@@ -172,6 +183,15 @@
   <script src="/__/firebase/7.14.4/firebase-app.js"></script>
   <script src="/__/firebase/init.js"></script>
   <script type="text/javascript" lang="javascript" src="js/create.js"></script>
+
+  <!-- Resize script -->
+  <script>
+    $(document).ready(function () {
+      $(window).resize(function () {
+        onResize();
+      });
+    });
+  </script>
 </body>
 
 </html>

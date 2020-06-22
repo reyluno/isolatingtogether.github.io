@@ -20,13 +20,16 @@ generateCards();
 
 //Pull json and call a function to parse it
 function generateCards() {
+    clearCards();
+
     $.getJSON("data/create.json", function (json) {
         parseJSON(json);
     });
 }
 
-function clearCards() {
-
+function clearCards(len) {
+    var cards = document.getElementById("grid");
+    cards.innerHTML = "";
 }
 
 function getWidth() {
@@ -75,8 +78,7 @@ function onResize() {
     }
 
     if (widthChanged) {
-        clearCards(data.length);
-        data.forEach(createCard);
+        generateCards();
     }
 }
 
@@ -99,16 +101,6 @@ function fillPopup(img) {
     var data = $("#" + linkID).data("json");
 
     if (typeof data !== 'undefined') {
-        if (data["url"]) {
-            var popupImg = document.getElementById("popupImg");
-            popupImg.src = baseURL + data["url"];
-        }
-
-        if (data["description"]) {
-            var popupBody = document.getElementById("popupBody");
-            popupBody.innerText = data["description"];
-        }
-
         var popupTitle = document.getElementById("popupTitle")
         if (data["title"]) {
             popupTitle.innerText = data["title"];
@@ -119,6 +111,16 @@ function fillPopup(img) {
         if (data["artist"]) {
             popupTitle.innerText += " by " + data["artist"];
         }
+
+        if (data["url"]) {
+            var popupImg = document.getElementById("popupImg");
+            popupImg.src = baseURL + data["url"];
+        }
+
+        if (data["description"]) {
+            var popupBody = document.getElementById("popupBody");
+            popupBody.innerText = data["description"];
+        }
     }
 }
 
@@ -128,17 +130,16 @@ function addImage(data, key, index) {
     var url = data["url"];
 
     // Create new row if needed
-    // TODO: This is hardcoded, not responsive
-    if (currLen % 3 == 0) {
+    if (currLen % width == 0) {
         var row = document.createElement("div")
         row.className = "row";
         container.appendChild(row);
         currRow = row;
     }
 
-    // Create container for image
+    // Create card container
     var imgDiv = document.createElement("div");
-    imgDiv.className = "col-6 col-md-4";
+    imgDiv.className = "col";
 
     //Create link for popup
     var anchor = document.createElement("a");
@@ -148,13 +149,7 @@ function addImage(data, key, index) {
     anchor.setAttribute("data-json", JSON.stringify(data));
     imgDiv.appendChild(anchor);
 
-    //Create link to download wrap around img
-    // var anchor = document.createElement("a");
-    // anchor.href = baseURL + url;
-    // anchor.target = "_blank";
-    // imgDiv.appendChild(anchor);
-
-    // Create image
+    // Create image card to put in link
     var img = document.createElement("img");
     img.id = key + "-img";
     img.src = baseURL + url;
