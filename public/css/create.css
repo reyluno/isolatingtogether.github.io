@@ -39,6 +39,20 @@
   opacity: 0.6;
 }
 
+.create-img {
+  width: 100%;
+  height: auto;
+}
+
+.tags a {
+  color: #000;
+  opacity: 0.5;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.tags a:hover {
+  opacity: 1;
+}
 .placeholder-prose {
   width: 100%;
   padding-top: 48%;
