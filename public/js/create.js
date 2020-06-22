@@ -3,14 +3,130 @@ var currLen = 0;
 var currRow;
 var container = document.getElementById("grid");
 var baseURL = "https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/create/";
-var imgData = ['AlbertGwo2.jpg', 'RommelNunez3.jpg', 'AlbertGwo8.jpg', 'AlbertGwo5.jpg',
-    'KyleeDanks1.png', 'RubaNadar1.jpeg', 'AdeBalogun2.jpg', 'AlbertGwo12.jpg', 'AlbertGwo11.jpg', 'ElianaRodgers3.jpg', 'RobertHunter.jpg', 'ElianaRodgers2.jpg', 'RubaNadar2.jpeg', 'CarlosOchoa1.jpg', 'RommelNunez1.jpg', 'AlbertGwo10.jpg', 'AlbertGwo4.jpg', 'GrantPace2.png', 'GrantPace1.jpg', 'LukeBolster4.jpg', 'AlbertGwo1.jpg', 'ElianaRodgers1.jpg', 'LukeBolster3.jpg', 'AlbertGwo6.JPG', 'AdeBalogun3.jpg', 'RubaNadar4.jpeg', 'AlbertGwo9.jpg', 'MadeleineMueller.jpeg', 'LukeBolster2.jpg', 'AlbertGwo7.jpg', 'CameronLee.jpg', 'RubaNadar3.jpeg', 'RommelNunez2.jpg', 'AdeBalogun1.jpg', 'FergusCampbell.gif', 'AshleyJiao.png', 'AlbertGwo3.jpg', 'LukeBolster1.jpeg'
-];
+var currWidth = getWidth();
+var wideLimit = 1200;
+var thinLimit = 800;
+var width;
 
-imgData.forEach(addImage);
+if (currWidth > wideLimit) {
+    width = 3;
+} else if (currWidth > thinLimit) {
+    width = 2;
+} else {
+    width = 1;
+}
+
+generateCards();
+
+//Pull json and call a function to parse it
+function generateCards() {
+    $.getJSON("data/create.json", function (json) {
+        parseJSON(json);
+    });
+}
+
+function clearCards() {
+
+}
+
+function getWidth() {
+    var viewWidth;
+
+    // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+    if (typeof window.innerWidth != 'undefined') {
+        viewWidth = window.innerWidth;
+    }
+
+    // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+    else if (typeof document.documentElement != 'undefined' &&
+        typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0) {
+        viewPortWidth = document.documentElement.clientWidth;
+    }
+
+    // older versions of IE
+    else {
+        viewPortWidth = document.getElementsByTagName('body')[0].clientWidth;
+    }
+    return viewWidth;
+}
+
+function onResize() {
+    currWidth = getWidth();
+
+    var widthChanged = false;
+    if (currWidth > wideLimit) {
+        if (width != 3) {
+            width = 3;
+            console.log("Showing 3 cards.")
+            widthChanged = true;
+        }
+    } else if (currWidth > thinLimit) {
+        if (width != 2) {
+            width = 2;
+            console.log("Showing 2 cards.")
+            widthChanged = true;
+        }
+    } else {
+        if (width != 1) {
+            width = 1;
+            console.log("Showing 1 card.")
+            widthChanged = true;
+        }
+    }
+
+    if (widthChanged) {
+        clearCards(data.length);
+        data.forEach(createCard);
+    }
+}
+
+//Create cards from json
+function parseJSON(json) {
+    var art = json["art"];
+    var i = 0;
+    for (var key in art) {
+        addImage(art[key], key, i)
+        i++;
+    }
+}
+
+//This function uses the id of card clicked on to pull data from JSON and fill the popup
+function fillPopup(img) {
+    //Get ID of anchor to pull data from
+    var linkID = img.id.split("-")[0];
+
+    //get data from anchor to fill in boxes
+    var data = $("#" + linkID).data("json");
+
+    if (typeof data !== 'undefined') {
+        if (data["url"]) {
+            var popupImg = document.getElementById("popupImg");
+            popupImg.src = baseURL + data["url"];
+        }
+
+        if (data["description"]) {
+            var popupBody = document.getElementById("popupBody");
+            popupBody.innerText = data["description"];
+        }
+
+        var popupTitle = document.getElementById("popupTitle")
+        if (data["title"]) {
+            popupTitle.innerText = data["title"];
+        } else {
+            popupTitle.innerText = "Untitiled";
+        }
+
+        if (data["artist"]) {
+            popupTitle.innerText += " by " + data["artist"];
+        }
+    }
+}
 
 //This function adds rows/images to grid as needed
-function addImage(url, index) {
+//url is relative to base path, key is random string in json
+function addImage(data, key, index) {
+    var url = data["url"];
+
     // Create new row if needed
     // TODO: This is hardcoded, not responsive
     if (currLen % 3 == 0) {
@@ -24,27 +140,27 @@ function addImage(url, index) {
     var imgDiv = document.createElement("div");
     imgDiv.className = "col-6 col-md-4";
 
-    //Create link to download wrap around img
+    //Create link for popup
     var anchor = document.createElement("a");
-    anchor.href = baseURL + url;
-    anchor.target = "_blank";
+    anchor.id = key;
+    anchor.setAttribute("data-toggle", "modal");
+    anchor.setAttribute("data-target", "#centralModalLg");
+    anchor.setAttribute("data-json", JSON.stringify(data));
     imgDiv.appendChild(anchor);
+
+    //Create link to download wrap around img
+    // var anchor = document.createElement("a");
+    // anchor.href = baseURL + url;
+    // anchor.target = "_blank";
+    // imgDiv.appendChild(anchor);
 
     // Create image
     var img = document.createElement("img");
+    img.id = key + "-img";
     img.src = baseURL + url;
     img.className = "img-fluid";
+    img.setAttribute("onclick", "fillPopup(this)")
     anchor.appendChild(img);
-
-    // Create Caption
-    var myRegexp = /^[A-Z][-a-z]+/
-    var firstName = myRegexp.exec(url);
-    var lastName = myRegexp.exec(url.substring(firstName[0].length, url.length));
-
-    var caption = document.createElement("div");
-    caption.className = "caption text-center";
-    caption.innerText = "Art by " + firstName + " " + lastName;
-    imgDiv.appendChild(caption);
 
     // Append div to current row
     currRow.appendChild(imgDiv);
