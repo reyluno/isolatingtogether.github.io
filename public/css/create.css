@@ -32,11 +32,22 @@
 .fa {
   color: #fff;
   padding: 10px;
+  transition: 0.4s;
 }
 
 .fa:hover {
   color: #fff;
-  opacity: 0.6;
+  opacity: 0.5;
+  text-decoration: none;
+}
+.modal-socials {
+  color: #000;
+}
+
+.modal-socials:hover {
+  color: #000;
+  opacity: 0.5;
+
 }
 
 .create-img {
