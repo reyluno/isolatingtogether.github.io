@@ -105,7 +105,7 @@ function fillPopup(img) {
         if (data["title"]) {
             popupTitle.innerText = data["title"];
         } else {
-            popupTitle.innerText = "Untitiled";
+            popupTitle.innerText = "Untitled";
         }
 
         if (data["artist"]) {
