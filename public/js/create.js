@@ -92,8 +92,40 @@ function parseJSON(json) {
     }
 }
 
+function clearPopup() {
+    var sm = ["fb", "tw", "em", "web", "ig", "source"];
+    var tags = ["tag1", "tag2", "tag3"];
+    var txts = ["title", "desc"];
+
+    //clear sm buttons
+    for (var key of sm) {
+        var elm = document.getElementById(key);
+        elm.href = "#";
+        elm.style.display = "none";
+    }
+
+    //clear tags
+    for (var key of tags) {
+        var tag = document.getElementById(key);
+        tag.innerText = "";
+        tag.href = "";
+    }
+
+    //clear txt (artist is within title)
+    for (var key of txts) {
+        var txt = document.getElementById(key);
+        txt.innerText = "";
+    }
+
+    var img = document.getElementById("popupImg");
+    img.src = "";
+    img.style.display = "none";
+}
+
 //This function uses the id of card clicked on to pull data from JSON and fill the popup
 function fillPopup(img) {
+    clearPopup();
+
     //Get ID of anchor to pull data from
     var linkID = img.id.split("-")[0];
 
@@ -101,25 +133,76 @@ function fillPopup(img) {
     var data = $("#" + linkID).data("json");
 
     if (typeof data !== 'undefined') {
-        var popupTitle = document.getElementById("popupTitle")
+        var title = document.getElementById("title")
         if (data["title"]) {
-            popupTitle.innerText = data["title"];
+            title.innerText = data["title"];
         } else {
-            popupTitle.innerText = "Untitled";
-        }
-
-        if (data["artist"]) {
-            popupTitle.innerText += " by " + data["artist"];
+            title.innerText = "Untitled";
         }
 
         if (data["url"]) {
             var popupImg = document.getElementById("popupImg");
             popupImg.src = baseURL + data["url"];
+            popupImg.style.display = "block";
+
+            var source = document.getElementById("source");
+            source.style.display = "inline";
+
+            if (data["media"]) {
+                source.href = data["media"];
+                source.innerText = "Watch Video";
+                title.innerText += " [VIDEO]"
+            } else {
+                source.href = baseURL + data["url"];
+                source.innerText = "Open image in new tab";
+            }
+        }
+
+        if (data["artist"]) {
+            title.innerText += " by " + data["artist"];
         }
 
         if (data["description"]) {
-            var popupBody = document.getElementById("popupBody");
-            popupBody.innerText = data["description"];
+            var desc = document.getElementById("desc");
+            desc.innerText = data["description"];
+        }
+
+        if (data["email"]) {
+            var em = document.getElementById("em");
+            em.style.display = "inline";
+            em.href = "mailto:" + data["email"];
+        }
+
+        if (data["facebook"]) {
+            var fb = document.getElementById("fb");
+            fb.style.display = "inline";
+            fb.href = data["facebook"];
+        }
+
+        if (data["twitter"]) {
+            var tw = document.getElementById("tw");
+            tw.style.display = "inline";
+            tw.href = data["twitter"];
+        }
+
+        if (data["instagram"]) {
+            var ig = document.getElementById("ig");
+            ig.style.display = "inline";
+            ig.href = data["instagram"];
+        }
+
+        if (data["website"]) {
+            var web = document.getElementById("web");
+            web.style.display = "inline";
+            web.href = data["website"];
+        }
+
+        if (data["tags"]) {
+            var list = data["tags"].split(",");
+            for (var i = 0; i < list.length; i++) {
+                var tag = document.getElementById("tag" + (i + 1));
+                tag.innerText = "#" + list[i].trim();
+            }
         }
     }
 }

@@ -112,35 +112,31 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 id="popupTitle" class="modal-title w-100">Artwork not found.</h4>
+          <h4 id="title" class="modal-title w-100">Artwork not found.</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
+
         <img id="popupImg" class="img-fluid create-img" alt="Responsive image">
-        <div id="popupMedia" class="modal-body"></div>
-        <div id="popupDescription" class="modal-body"></div>
-        <div id="popupArtist" class="modal-body"></div>
-        <div id="popupEmail" class="modal-body"></div>
-        <div id="popupWebsite" class="modal-body"></div>
-        <div id="popupTwitter" class="modal-body"></div>
-        <div id="popupInstagram" class="modal-body"></div>
-        <div id="popupFacebook" class="modal-body"></div>
-        <div id="popupTag1" class="modal-body"></div>
-        <div id="popupTag2" class="modal-body"></div>
-        <div id="popupTag3" class="modal-body"></div>
-<div class="modal-footer">
-  <a href="#" class="fa fa-globe modal-socials" id="web"></a>
-  <a href="#" class="fa fa-envelope modal-socials" id="em"></a>
-  <a href="#" class="fa fa-twitter modal-socials" id="tw"></a>
-  <a href="#" class="fa fa-instagram modal-socials" id="ig"></a>
-  <a href="#" class="fa fa-facebook modal-socials" id="fb"></a>
-</div>
-        <div class="modal-footer">
+        <p id="desc" class="modal-body"></p>
+
+        <div id="tags" class="modal-footer">
           <div class="tags mr-auto" id="popup-tags">
-          <a href="#">#example tag link</a>
+            <a id="tag1" href="#" onclick="return false;"></a>
+            <a id="tag2" href="#" onclick="return false;"></a>
+            <a id="tag3" href="#" onclick="return false;"></a>
           </div>
-          <a href="#source" class="btn btn-sm">Source</a>
+
+          <div id="links">
+            <a href="#" target="_blank" style="display: none;" class="fa fa-globe modal-socials" id="web"></a>
+            <a href="#" target="_blank" style="display: none;" class="fa fa-envelope modal-socials" id="em"></a>
+            <a href="#" target="_blank" style="display: none;" class="fa fa-twitter modal-socials" id="tw"></a>
+            <a href="#" target="_blank" style="display: none;" class="fa fa-instagram modal-socials" id="ig"></a>
+            <a href="#" target="_blank" style="display: none;" class="fa fa-facebook modal-socials" id="fb"></a>
+          </div>
+
+          <a id="source" href="#" target="_blank" class="btn btn-secondary btn-sm">Source</a>
           <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
         </div>
       </div>
