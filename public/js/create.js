@@ -1,4 +1,5 @@
 //variables used in addImage
+firebase.analytics();
 var currLen = 0;
 var currRow;
 var container = document.getElementById("grid");
