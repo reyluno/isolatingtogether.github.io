@@ -1,4 +1,5 @@
 // set our variables
+firebase.analytics();
 const filePath = "./data/States.xlsx";
 var baseURL = "https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/act/";
 var viewer = document.getElementById('dataviewer');
