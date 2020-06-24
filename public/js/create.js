@@ -87,6 +87,22 @@ function onResize() {
 function parseJSON(json) {
     var art = json["art"];
     var i = 0;
+
+    var grid = document.getElementById("grid");
+    var row = document.createElement("div");
+    row.className = "row";
+    grid.appendChild(row);
+
+    //create columns based on width
+    for (var i = 0; i < width; i++) {
+        var col = document.createElement("div");
+        col.className = "col";
+        col.id = "col" + i;
+        col.style.display = "inline";
+        row.appendChild(col);
+    }
+
+    i = 0;
     for (var key in art) {
         addImage(art[key], key, i)
         i++;
@@ -213,17 +229,9 @@ function fillPopup(img) {
 function addImage(data, key, index) {
     var url = data["url"];
 
-    // Create new row if needed
-    if (currLen % width == 0) {
-        var row = document.createElement("div")
-        row.className = "row";
-        container.appendChild(row);
-        currRow = row;
-    }
-
     // Create card container
     var imgDiv = document.createElement("div");
-    imgDiv.className = "col";
+    imgDiv.style.marginBottom = "5px";
 
     //Create link for popup
     var anchor = document.createElement("a");
@@ -241,8 +249,9 @@ function addImage(data, key, index) {
     img.setAttribute("onclick", "fillPopup(this)")
     anchor.appendChild(img);
 
-    // Append div to current row
-    currRow.appendChild(imgDiv);
+    // Append div to column based on index
+    var currCol = document.getElementById("col" + (index % width));
+    currCol.appendChild(imgDiv);
 
     currLen++;
 }
