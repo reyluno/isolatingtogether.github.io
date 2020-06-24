@@ -23,6 +23,9 @@
   padding: 0;
 }
 
+.mobile-only {
+  display: none;
+}
 .placeholder {
   width: 100%;
   padding-top: 100%;
