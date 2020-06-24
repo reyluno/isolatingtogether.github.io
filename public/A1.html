@@ -27,17 +27,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
 
   <!-- Load Facebook SDK for JavaScript -->
-  <div id="fb-root"></div>
-  <script>
-    (function (d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  </script>
+        <div id="fb-root"></div>
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              xfbml            : true,
+              version          : 'v7.0'
+            });
+          };
+
+          (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
   <!--Tab Title-->
   <title>Pandemic Testing Board</title>
@@ -146,11 +151,13 @@
   <div class="container-flex mt-5" style="background-color: #88CCF1;">
     <div class="container">
       <div class="body-text py-5">
-        <!-- Resistbot chatbot code -->
-        <div class="fb-customerchat" page_id="1224106861035505" theme_color="#0084ff"
-          logged_in_greeting="Say &ldquo;resist&rdquo; and I'll help you write to your officials!"
-          logged_out_greeting="Say &ldquo;resist&rdquo; and I'll help you write to your officials!">
-        </div>
+        <!-- Your Chat Plugin code -->
+       <div class="fb-customerchat"
+         attribution=setup_tool
+         page_id="1224106861035505"
+   logged_in_greeting="Hi, I'm Resistbot! Reply 'resist' to get started."
+   logged_out_greeting="Hi, I'm Resistbot! Reply 'resist' to get started.">
+       </div>
       </div>
     </div>
   </div>
