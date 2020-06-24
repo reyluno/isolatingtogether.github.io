@@ -22,6 +22,10 @@ body, html {
   z-index: 0;
 }
 
+.small {
+  max-width: 300px;
+}
+
 .medium {
   max-width: 400px;
 }
