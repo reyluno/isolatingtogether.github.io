@@ -23,7 +23,7 @@ body, html {
 }
 
 .small {
-  max-width: 300px;
+  width: 300px;
 }
 
 .medium {
