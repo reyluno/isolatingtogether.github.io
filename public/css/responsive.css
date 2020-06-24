@@ -70,6 +70,10 @@
     display: none;
   }
 
+  .mobile-only {
+    display: flex;
+  }
+
   .spacer {
     height: 130px;
   }
