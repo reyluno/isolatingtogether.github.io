@@ -9,40 +9,37 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <!--Bootstrap/CSS Import-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/A1.css" class="rel">
   <link rel="stylesheet" href="css/responsive.css" class="rel">
   <!--Fonts-->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
 
   <!-- Load Facebook SDK for JavaScript -->
-        <div id="fb-root"></div>
-        <script>
-          window.fbAsyncInit = function() {
-            FB.init({
-              xfbml            : true,
-              version          : 'v7.0'
-            });
-          };
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml: true,
+        version: 'v7.0'
+      });
+    };
 
-          (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 
   <!--Tab Title-->
   <title>Pandemic Testing Board</title>
@@ -50,13 +47,9 @@
 
 <body>
   <!--NAVBAR-->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm"
-    style="background-color: #88CCF1; padding: 1.2em 2em;">
-    <a class="navbar-brand" href="index.html"><img
-        src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/LogoWhite_Small.png"
-        style="height: 50px; width: auto;"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm" style="background-color: #88CCF1; padding: 1.2em 2em;">
+    <a class="navbar-brand" href="index.html"><img src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/LogoWhite_Small.png" style="height: 50px; width: auto;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -86,30 +79,27 @@
       </ul>
       <ul class="navbar-nav justify-content-end">
         <li class="nav-item">
-          <a href="https://instagram.com/isolatogether?igshid=180zphtvw052e" class="fa fa-instagram"
-            target="_blank"></a>
+          <a href="https://instagram.com/isolatogether?igshid=180zphtvw052e" class="fa fa-instagram" target="_blank"></a>
         </li>
         <li class="nav-item">
           <a href="https://twitter.com/Isolatogether" class="fa fa-twitter" target="_blank"></a>
         </li>
         <li class="nav-item">
-          <a href="https://www.facebook.com/IsolatingTogether/?modal=admin_todo_tour" class="fa fa-facebook"
-            target="_blank"></a>
+          <a href="https://www.facebook.com/IsolatingTogether/?modal=admin_todo_tour" class="fa fa-facebook" target="_blank"></a>
         </li>
       </ul>
     </div>
   </nav>
 
   <div class="container-flex vh-100 vw-100 position-relative cn">
-    <div class="bg-overlay"><img src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/statue.jpg"
-        class="bg" alt="Responsive image"></div>
+    <div class="bg-overlay"><img src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/statue.jpg" class="bg" alt="Responsive image"></div>
     <div class="container mx-auto">
       <div class="title">action one</div>
       <div class="name">The Pandemic Testing Board</div>
       <div class="subtitle">Jobs, Testing, and Tracing.</div>
       <script>
-        $(function () {
-          $('a[href*=\\#]').on('click', function (e) {
+        $(function() {
+          $('a[href*=\\#]').on('click', function(e) {
             e.preventDefault();
             $('html, body').animate({
               scrollTop: $($(this).attr('href')).offset().top
@@ -141,11 +131,27 @@
           So how can we make this vision become reality?
         </div>
       </div>
-      <object data="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/FactSheet.pdf" type="application/pdf" width="100%" height="800px">
-  <p>It appears you don't have a PDF plugin for this browser.
-   No biggie... you can <a href="resume.pdf">click here to
-  download the PDF file.</a></p>
-</object>
+      <div class="body-text my-5">
+        <h1>Pandemic Testing Board Fact Sheet</h1>
+        <b>What it is:</b>
+        <ul>
+          <li>The <a href="https://ethics.harvard.edu/files/center-for-ethics/files/roadmaptopandemicresilience_updated_4.20.20_0.pdf" target="_blank">‘Roadmap to Pandemic Resilience’ released by the Edmond J. Safra Center for Ethics at Harvard University</a> in April 2020 originally proposed the federal government form a Pandemic Testing Board (PTB) with two primary functions:</li>
+          <ul>
+            <li>Pandemic Testing Supply Initiative: identify, procure, and mandate the production of testing materials by contracting with producers and servicers </li>
+            <li>Pandemic Testing Deployment Initiative: recommend to states how to source and manage the additional testing facilities and personnel needed to accomplish mass daily testing</li>
+          </ul>
+          <li>Isolating Together further emphasizes the Pandemic Testing Board’s role in ensuring equitable distribution of COVID-19 testing resources and prioritizing support for disproportionately affected low-income and BIPOC communities. </li>
+        </ul>
+        <b>How it would be formed:</b>
+        <ul>
+          <li>This board would be created by Congress through legislation allowing an interstate compact. Members would be selected by lead states and additional funding would be supplied by congressional appropriation.
+</li>
+        </ul>
+        <b>Why we are calling for it:</b>
+        <ul>
+          <li>The fragmented approach of the United States government to manage COVID-19 has largely left testing and contact tracing protocols up to state and regional officials, creating confusion in the testing resources market. The PTB is needed to coordinate the complex supply chain for testing resources. The PTB will more effectively mobilize the resources we have, achieving the massive scale of testing needed to precisely manage the pandemic. Instead of broad stay-at-home orders, quarantines would be handled on an individual level, suppressing COVID-19 while allowing the economy to safely reopen and continue functioning amid case spikes. Not only would the PTB mitigate our immediate crisis, but it would better prepare us for future crises.</li>
+        </ul>
+      </div>
       <div class="body-text mt-5"><b>One:</b> We have to tell our representatives we REALLY want this. Let's make it
         clear that this action is in everyone’s interest–economically, socially, and importantly, for our well-being.
         Use the search tool
@@ -156,14 +162,11 @@
   <div class="container-flex mt-5" style="background-color: #88CCF1;">
     <div class="container">
       <div class="body-text py-5" style="color: #fff;">
-        <b>Contact your representatives in under two minutes.</b> Use the Resistbot chat embedded on this page to contact your representatives directly! Texting the word <b>"Resist"</b> to <b>50409</b> through SMS or iMessage, or use the Resistbot chat embedded on this page to contact your representatives directly! Resistbot will turn your texts into a letter and deliver it automatically to any elected official you'd like.
+        <b>Contact your representatives in under two minutes.</b> Use the Resistbot chat embedded on this page to contact your representatives directly! Texting the word <b>"Resist"</b> to <b>50409</b> through SMS or iMessage, or use the Resistbot
+        chat embedded on this page to contact your representatives directly! Resistbot will turn your texts into a letter and deliver it automatically to any elected official you'd like.
         <!-- Your Chat Plugin code -->
-       <div class="fb-customerchat"
-         attribution=setup_tool
-         page_id="1224106861035505"
-   logged_in_greeting="Hi, I'm Resistbot! Reply 'resist' to get started."
-   logged_out_greeting="Hi, I'm Resistbot! Reply 'resist' to get started.">
-       </div>
+        <div class="fb-customerchat" attribution=setup_tool page_id="1224106861035505" logged_in_greeting="Hi, I'm Resistbot! Reply 'resist' to get started." logged_out_greeting="Hi, I'm Resistbot! Reply 'resist' to get started.">
+        </div>
       </div>
     </div>
   </div>
@@ -173,17 +176,15 @@
       If you're unsure where to start, we've put together a sample script for what to say to your representatives.
       <div class="jumbotron my-2">
         <i>Hi there. My name is [______], and I am from [______]. I am reaching out to request that you declare support
-          for the creation of a national Pandemic Testing Board, similar to what is presented in the Harvard <a
-            href="https://ethics.harvard.edu/files/center-for-ethics/files/roadmaptopandemicresilience_updated_4.20.20_0.pdf"
-            target="_blank">Roadmap to Pandemic Resilience</a>, a proposal for massive scale testing, tracing, and
+          for the creation of a national Pandemic Testing Board, similar to what is presented in the Harvard <a href="https://ethics.harvard.edu/files/center-for-ethics/files/roadmaptopandemicresilience_updated_4.20.20_0.pdf" target="_blank">Roadmap
+            to Pandemic Resilience</a>, a proposal for massive scale testing, tracing, and
           supported
           isolation. This proposal creates thousands of jobs in order to produce and carry out tests, contact trace
           individuals who test positive, and provide spaces for safe isolation. This board must actively take into
           account and support
           marginalized communities, communities of color, and Indigenous communities who are disproportionately impacted
-          by the virus. The Movement for Black Lives’ <a
-            href="https://live-m4bl.pantheonsite.io/wp-content/uploads/2020/03/M4BL-COVID-19-Demands_FINAL.pdf"
-            target="_blank">National Demands for COVID-19</a> illustrate the kinds of policies we must pursue,
+          by the virus. The Movement for Black Lives’ <a href="https://live-m4bl.pantheonsite.io/wp-content/uploads/2020/03/M4BL-COVID-19-Demands_FINAL.pdf" target="_blank">National Demands for COVID-19</a> illustrate the kinds of policies we must
+          pursue,
           including, but not limited to:
           providing free COVID-19 testing, treatment, and services for ALL, regardless of immigration status; ensuring
           equal access to safe quarantine spaces, for non-disabled and disabled people alike; and redirecting federal
@@ -202,7 +203,7 @@
 
     </div>
     <div class="container text-center">
-    <img src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/testing.jpg" class="img-fluid small" alt="Image">
+      <img src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/testing.jpg" class="img-fluid small" alt="Image">
     </div>
     <div class="body-text my-5">
       <b>Two:</b> We have to spread the word. Everyone knows the word “Coronavirus,” and now everyone needs to know and
@@ -213,8 +214,8 @@
       start with those closest to us–those who trust and care for us, and bring them alongside our movement.
     </div>
     <div class="container text-center">
-    <img src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/coming_together2.jpg" class="img-fluid small" alt="Image">
-  </div>
+      <img src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/coming_together2.jpg" class="img-fluid small" alt="Image">
+    </div>
     <div class="body-text my-5">This plan is ambitious, but the moment demands it. And the best way to meet such
       ambitious demands is with a strong, people-powered, unified voice calling to take care of and love every single
       person in this country.
