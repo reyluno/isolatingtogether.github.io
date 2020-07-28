@@ -168,9 +168,14 @@ function createCard(item, index) {
     }
 
     if (item.hasOwnProperty("Link")) {
-        var anchor = clone.getElementById("temp-link");
-        anchor.id += index;
-        anchor.href = item["Link"];
+        var anchor1 = clone.getElementById("temp-img-link");
+        anchor1.id += index;
+
+        var anchor2 = clone.getElementById("temp-link");
+        anchor2.id += index;
+
+        anchor1.href = item["Link"];
+        anchor2.href = item["Link"];
     }
 
     document.getElementById(row_id).appendChild(clone);
