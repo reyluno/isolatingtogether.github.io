@@ -68,6 +68,11 @@ hr.new3 {
   opacity: .5;
 }
 
+.small {
+  display: inline-block;
+  max-width: 300px;
+}
+
 .fa {
   color: #fff;
   padding: 10px;
