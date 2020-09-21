@@ -5,6 +5,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 firebase-debug.log*
+storage.rules
+*.zip
 
 # Firebase cache
 .firebase/

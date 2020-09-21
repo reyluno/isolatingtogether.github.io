@@ -23,12 +23,50 @@
   padding: 0;
 }
 
+.mobile-only {
+  display: none;
+}
 .placeholder {
   width: 100%;
   padding-top: 100%;
   background-color: #e3e3e3;
 }
 
+.fa {
+  color: #fff;
+  padding: 10px;
+  transition: 0.4s;
+}
+
+.fa:hover {
+  color: #fff;
+  opacity: 0.5;
+  text-decoration: none;
+}
+.modal-socials {
+  color: #000;
+}
+
+.modal-socials:hover {
+  color: #000;
+  opacity: 0.5;
+
+}
+
+.create-img {
+  width: 100%;
+  height: auto;
+}
+
+.tags a {
+  color: #000;
+  opacity: 0.5;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.tags a:hover {
+  opacity: 1;
+}
 .placeholder-prose {
   width: 100%;
   padding-top: 48%;

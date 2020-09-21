@@ -27,4 +27,4 @@ console.log(error.message);
 
 window.onload = function () {
 //displayAll();
-for (var i = 0; i < 9; i++) { addImage("img/helper.jpg", "Title by Author here" ); } }
+for (var i = 0; i < 9; i++) { addImage("https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/helper.jpg", "Title by Author here" ); } }

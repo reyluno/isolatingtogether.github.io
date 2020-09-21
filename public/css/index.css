@@ -32,6 +32,15 @@ body, html {
   align-items: center;
 }
 
+.fa {
+  padding: 10px;
+}
+
+.fa:hover {
+  color: #fff;
+  opacity: 0.6;
+}
+
 #mc-embedded-subscribe-form {
   background-color: transparent;
 }

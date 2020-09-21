@@ -17,6 +17,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/act.css" class="rel">
   <link rel="stylesheet" href="css/responsive.css" class="rel">
   <!--Fonts-->
@@ -36,7 +37,8 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm"
       style="background-color: #FFA69E; padding: 1.2em 2em;">
 
-      <a class="navbar-brand" href="index.html"><img src="img/LogoWhite_Small.png"
+      <a class="navbar-brand" href="index.html"><img
+          src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/LogoWhite_Small.png"
           style="height: 50px; width: auto;"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
         aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,19 +47,16 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
+            <a class="nav-link" href="A1.html">Pandemic Testing Board</a>
+          </li>
+          <li class="nav-item active">
             <a class="nav-link" href="act.html">Act</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="create.html">Create</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="inspire.html">Inspire</a>
-          </li>
-          <li class="nav-item active">
             <a class="nav-link" href="antiracism.html">Anti-Racism</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="A1.html">Pandemic Testing Board</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="about.html">About</a>
@@ -65,7 +64,20 @@
           <li class="nav-item active">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
+        </ul>
 
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item">
+            <a href="https://instagram.com/isolatogether?igshid=180zphtvw052e" class="fa fa-instagram"
+              target="_blank"></a>
+          </li>
+          <li class="nav-item">
+            <a href="https://twitter.com/Isolatogether" class="fa fa-twitter" target="_blank"></a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.facebook.com/IsolatingTogether/?modal=admin_todo_tour" class="fa fa-facebook"
+              target="_blank"></a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -73,12 +85,13 @@
     <!--FILTERS-->
     <div class="container" style="margin-top: 150px">
       <div class="section-header">ACT TOGETHER</div>
-      <div class="body-text">Use our collection of efforts to see how you can help in your area.</div>
+      <div class="body-text">Use our collection of efforts to see how you can help in your area. If you know of any
+        opportunities that we do not have on this page, you are more than welcome to submit them to us via our <a
+          href="contact.html">contact page.</a></div>
 
       <div class="row align-items-center mt-5">
         <div class="col">
           <select id="state_zip_input" class="form-control" placeholder="State or ZIP">
-
             <option value="Alabama">Alabama</option>
             <option value="Alaska">Alaska</option>
             <option value="Arizona">Arizona</option>
@@ -153,9 +166,6 @@
         <a href="create.html">
           <h6>Create</h6>
         </a>
-        <a href="inspire.html">
-          <h6>Inspire</h6>
-        </a>
       </div>
       <div class="col-2"></div>
       <div class="col-2">
@@ -182,26 +192,33 @@
   <template>
     <div class="col">
       <div class="card">
-        <a id="temp-link" href="">
-          <img id="temp-img" class="card-img-top" src="img/helper.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 id="temp-title" class="card-title"></h5>
+        <a id="temp-img-link" href="" target="_blank">
+          <img id="temp-img" class="card-img-top"
+            src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/helper.jpg" alt="Card image cap">
         </a>
-        <p class="card-text"><small id="temp-location" class="text-muted"></small></p>
-        <p id="temp-desc" class="card-text"></p>
-        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+        <div class="card-body">
+          <a id="temp-link" href="" target="_blank">
+            <h5 id="temp-title" class="card-title"></h5>
+          </a>
+          <p class="card-text"><small id="temp-location" class="text-muted"></small></p>
+          <p id="temp-desc" class="card-text"></p>
+        </div>
       </div>
     </div>
-    </div>
   </template>
+
+  <script src="/__/firebase/7.14.4/firebase-app.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="/__/firebase/7.15.1/firebase-analytics.js"></script>
 
   <!--XLSX Reader-->
   <script type="text/javascript" lang="javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.1/xlsx.full.min.js"></script>
 
+  <script type="text/javascript" lang="javascript" src="js/act.js"></script>
+
   <!-- Resize script -->
   <script>
-    x = 0;
     $(document).ready(function () {
       $(window).resize(function () {
         onResize();
@@ -209,175 +226,6 @@
     });
   </script>
 
-  <script>
-    function getWidth() {
-      var viewWidth;
-
-      // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
-      if (typeof window.innerWidth != 'undefined') {
-        viewWidth = window.innerWidth;
-      }
-
-      // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
-      else if (typeof document.documentElement != 'undefined' &&
-        typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0) {
-        viewPortWidth = document.documentElement.clientWidth;
-      }
-
-      // older versions of IE
-      else {
-        viewPortWidth = document.getElementsByTagName('body')[0].clientWidth;
-      }
-      return viewWidth;
-    }
-
-    // set our variables
-    const filePath = "./data/States.xlsx";
-    var viewer = document.getElementById('dataviewer');
-    var data = [];
-    var currWidth = getWidth();
-    var widthLimit = 1200;
-    var width;
-
-    if (currWidth > widthLimit) {
-      width = 3;
-    } else {
-      width = 1;
-    }
-
-    function importFile(state) {
-      // use loading function to get file from server-side
-      fetch(filePath).then(function (res) {
-          // data as arraybuffer
-          if (!res.ok) throw new Error("importing failed");
-          return res.arrayBuffer();
-        })
-        .then(function (ab) {
-          // received data async. now parse ab = ArrayBuffer
-          var data = new Uint8Array(ab);
-          var workbook = XLSX.read(data, {
-            type: "array"
-          });
-
-          // TODO: reformat the input to be state with Capital letter
-
-          //have the workbook. Now use the input state and get a json from the sheet
-          var worksheet = workbook.Sheets[state];
-          var _JsonData = XLSX.utils.sheet_to_json(worksheet, {
-            raw: true
-          });
-
-          clearCards(_JsonData.length);
-          _JsonData.forEach(createCard);
-
-          data = _JsonData;
-        });
-    }
-    /* now could take the json data and make something from it in the
-    dataviewer division */
-
-    // this will be our entry point to the parsing
-    function entry(state) {
-      importFile(state);
-    }
-
-    //TODO: needs to prettied up
-    function clearCards(len) {
-      var cards = document.getElementById("card_container");
-
-      if (len == 0) {
-        cards.innerHTML = "<p>No cards found.</p>";
-      } else {
-        cards.innerHTML = "";
-      }
-    }
-
-    function onResize() {
-      currWidth = getWidth();
-      console.log("resize to " + currWidth);
-      if (currWidth < widthLimit && width == 3) {
-        console.log("switch to 1");
-        width = 1;
-        clearCards();
-        data.forEach(createCard);
-      } else if (currWidth > widthLimit && width == 1) {
-        console.log("switch to 3");
-        width = 3;
-        clearCards();
-        data.forEach(createCard);
-      }
-    }
-
-    function createCard(item, index) {
-      var cards = document.getElementById("card_container");
-      data[index] = item;
-
-      var row_id = "row" + Math.trunc(index / width);
-
-      if (index % width == 0) {
-        if (index != 0) {
-          cards.innerHTML += '</div>';
-        }
-
-        cards.innerHTML += '<div class="row" id="' + row_id + '" >';
-      }
-
-      var temp = document.getElementsByTagName("template")[0];
-      var clone = temp.content.cloneNode(true);
-
-      //Update Title
-      if (item.hasOwnProperty("Name")) {
-        var title = clone.getElementById("temp-title");
-        title.id += index;
-        title.innerText = item["Name"];
-      }
-
-      //Update Description
-      if (item.hasOwnProperty("Details")) {
-        var desc = clone.getElementById("temp-desc");
-        desc.id += index;
-        desc.innerText = item["Details"];
-      }
-
-      //Update Image ID and Tag if needed
-      var img = clone.getElementById("temp-img");
-      img.id += index;
-
-      if (item.hasOwnProperty("Type")) {
-        var tag = item["Type"];
-
-        if (tag == "Mutual Aid") {
-          img.src = "img/act/mutualAid.jpeg";
-        } else if (tag == "Donate") {
-          img.src =
-            "https://raw.githubusercontent.com/reyluno/isolatingtogether.github.io/firebase-setup/public/img/act/donation.jpeg";
-        } else if (tag == "Volunteer") {
-          img.src = "img/act/volunteer.jpg";
-        } else if (tag == "Central Resource") {
-          img.src = "img/act/centralResource.jpeg";
-        }
-      }
-
-      //Update Location
-      if (item.hasOwnProperty("Location")) {
-        var location = clone.getElementById("temp-location");
-        location.id += index;
-        location.innerText = item["Location"];
-      }
-
-      //Update Img/Title Link
-      if (item.hasOwnProperty("Link")) {
-        var anchor = clone.getElementById("temp-link");
-        anchor.id += index;
-        anchor.href = item["Link"];
-      }
-
-      document.getElementById(row_id).appendChild(clone);
-    }
-
-    //Default Card entry is from New York until someone searches
-    entry("New York");
-  </script>
   </div>
 </body>
 
