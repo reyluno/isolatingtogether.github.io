@@ -17,7 +17,7 @@ def jsonFromCSV(name="submissionForm.csv"):
     # email:1, artist:2, url:3, alt. url:4, title:5, tags:6, description:7
     createJSON = {"art": {}}
 
-    with open(name, 'r') as file:
+    with open(name, 'r', encoding="utf-8") as file:
         reader = csv.reader(file)
         next(reader)  # skip labels
         for row in reader:
