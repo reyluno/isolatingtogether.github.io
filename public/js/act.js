@@ -157,6 +157,8 @@ function createCard(item, index) {
             img.src = baseURL + "volunteer.jpg";
         } else if (tag == "Central Resource") {
             img.src = baseURL + "centralResource.jpeg";
+        } else if (tag == "NSRN") {
+          img.src = baseURL + "NSRN.jpeg";
         }
     }
 
