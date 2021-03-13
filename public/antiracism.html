@@ -14,58 +14,43 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
-  <!--Custom CSS-->
-  <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/main.css" class="rel">
-  <link rel="stylesheet" href="css/mobile.css" class="rel">
+  <link rel="stylesheet" href="css/antiracism.css" class="rel">
+  <link rel="stylesheet" href="css/responsive.css" class="rel">
   <!--Fonts-->
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-  <!--JavaScript-->
-  <script src="js/navbar.js"></script>
-  <script src="js/parallax.js"></script>
-  <script src="js/parallax.min.js"></script>
-  <script>
-    $(function() {
-      $(document).scroll(function() {
-        var $nav = $(".fixed-top");
-        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height() + 600);
-      });
-    });
-  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
   <!--Tab Title-->
-  <title>Anti-Racism</title>
+  <title>Fight Together</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" id="navbar">
-    <a class="navbar-brand" href="index.html"><img src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/LogoWhite_Small.png" alt="Isolating Together"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+  <!--NAVBAR-->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm" style="background-color: #88CCF1; padding: 1.2em 2em;">
+
+    <a class="navbar-brand" href="index.html"><img src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/LogoWhite_Small.png" style="height: 50px; width: auto;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarToggler">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link bottom" href="act.html">Act</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="A1.html">Pandemic Testing Board</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link bottom" href="create.html">Create</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="act.html">Act</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link bottom" href="inspire.html">Inspire</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="create.html">Create</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link bottom" href="ptb.html">Pandemic Testing Board</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="antiracism.html">Anti-Racism</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link bottom" href="antiracism.html">Anti-Racism</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="about.html">About</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link bottom" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link bottom" href="contact.html">Contact</a>
+        <li class="nav-item active">
+          <a class="nav-link" href="contact.html">Contact</a>
         </li>
       </ul>
       <ul class="navbar-nav justify-content-end">
@@ -81,98 +66,89 @@
       </ul>
     </div>
   </nav>
-  <section id="hero">
-    <!-- Background Image Parallax -->
-    <div class="parallax-window vw-100 vh-100" data-parallax="scroll" data-image-src="img/blm.jpg">
-      <div class="container vh-100 vw-100 cn">
-        <div class="hero-content mx-auto my-auto">
-          <h1 class="mb-3 text-center">Fighting Racism in Healthcare</h1>
-          <div class="subtitle text-center">The fight is about more than just accessibility.</div>
-          <div class="container mt-3 cn">
 
-            <script>
-              $(function() {
-                $('a[href*=\\#]').on('click', function(e) {
-                  e.preventDefault();
-                  $('html, body').animate({
-                    scrollTop: $($(this).attr('href')).offset().top
-                  }, 1000, 'swing');
-                });
-              });
-            </script>
-            <section id="scroll" class="arrow">
-              <a href="#section01"><span></span></a>
-            </section>
-          </div>
-        </div>
-      </div>
+  <div class="container-flex vh-100 vw-100 position-relative cn">
+    <div class="bg-overlay"><img src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/blm.jpg" class="bg" alt="Responsive image"></div>
+    <div class="container mx-auto">
+      <div class="name">Fighting Racism in Healthcare</div>
+      <div class="subtitle">The fight is about more than just accessibility.</div>
+
+      <!-- NOTE: i can't get this stupid script to scroll smoothly -->
+      <script>
+        $(function() {
+          $('a[href*=\\#]').on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+              scrollTop: $($(this).attr('href')).offset().top
+            }, 500, 'linear');
+          });
+        });
+      </script>
+
+      <section id="scroll" class="arrow">
+        <a href="#info"><span></span></a>
+      </section>
+
     </div>
+  </div>
+
+  <section id="info">
+    <div class="container mt-5">
+      <div class="section-header my-3">
+        Health Inequality in the US
+      </div>
+      <div class="body-text">It is said that when White people get a cold, Black people get pneumonia. History–and our present day–has borne
+        that out. But where does this inequality stem from? Well, the common denominator is racism. From how White
+        colonizers relied on <a href="https://www.nytimes.com/interactive/2019/08/14/magazine/racial-differences-doctors.html" target="_blank">completely false suppositions</a> of Black people’s pain tolerance to justify slavery, to the
+        fact that even today, doctors
+        provide unequal treatment to Black patients due to pervading <a href="https://www.aamc.org/news-insights/how-we-fail-black-patients-pain" target="_blank">racial biases</a>,
+        medical racism has quite literally taken millions of lives and
+        livelihoods.
+        <br><br>Ultimately, these racist beliefs have built a broader racist system that perpetuates itself in so many
+        ways. White opioid users have been treated much <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5121004/" target="_blank">more sympathetically</a> by the media–and consequently through policy–than Black and Latino
+        heroin users. Communities of color suffer from a <a href="https://newsinteractive.post-gazette.com/longform/stories/poorhealth/1/" target="_blank">scarcity of
+          doctors & hospitals</a> while toxic facilities, the product of historical zoning discrimination, litter their
+        neighborhoods. Relatively weak means of <a href="https://news.umich.edu/targeting-minority-low-income-neighborhoods-for-hazardous-waste-sites/" target="_blank">resisting corporate interests</a> leave residents of these communities with
+        worse-off hospital
+        systems and factories
+        spewing unhealthy toxins in the air. Brutalistic and racist police forces<a href="https://www.sentencingproject.org/publications/un-report-on-racial-disparities/" target="_blank"> disproportionately criminalize and punish</a> people of
+        color–especially Black people–naturally resulting in outsized and generational mental and physical harm.
+      </div>
   </section>
 
-  <section id="section01">
-    <div class="spacer mt-5"></div>
-  </section>
+  <div class="container mt-5">
+    <div class="body-text">The confluence of these and many more factors leads us to today, when communities of color
+      are being <a href="https://medicalxpress.com/news/2020-05-covid-assault-black-brown.html" target="_blank">disproportionately impacted</a> by the COVID-19 crisis. When communities have historically been
+      underfunded, given unequal
+      medical care & political attention, and have factories that spew toxins that contribute to respiratory diseases
+      such as asthma, it is no surprise that these communities would consequently face higher risks to a respiratory
+      virus.</div>
+  </div>
+  <div class="container my-5">
+    <div class="section-header my-3">Work for Better</div>
+    <div class="body-text">Given the devastating impacts of systemic racism in health outcomes, we have to commit to
+      being anti-racist. Proclaiming ourselves as “not racist,” means nothing, as it promises no action to overturn our
+      own potential
+      racist biases, let alone our harmful racist structures. Moreover, we can’t just work to overturn racist or unequal
+      structures, we must also foster new cooperation and egalitarianism: a system of true social–and therefore
+      medical–justice. This
+      spirit is fostered both through the on-the-ground <a href="act.html" target="_blank">action we can take,</a> and
+      the broader collectivist projects we pursue–like the <a href="A1.html" target="_blank">Pandemic Testing Board</a>.
+      We demand that
+      our broader policy goals align with the visions outlined by the Movement for Black Lives’ <a href="https://live-m4bl.pantheonsite.io/wp-content/uploads/2020/03/M4BL-COVID-19-Demands_FINAL.pdf" target="_blank">National Demands for
+        COVID-19.</a>
 
-  <section id="section02">
-    <div class="container my-5">
-      <div class="row">
-        <h3>Health Inequality in the US</h3>
-        <div class="spacer"></div>
-        <div class="body-text">
-          It is said that when White people get a cold, Black people get pneumonia. History–and our present day–has borne
-          that out. But where does this inequality stem from? Well, the common denominator is racism. From how White
-          colonizers relied on <a href="https://www.nytimes.com/interactive/2019/08/14/magazine/racial-differences-doctors.html" target="_blank">completely false suppositions</a> of Black people’s pain tolerance to justify slavery, to the
-          fact that even today, doctors
-          provide unequal treatment to Black patients due to pervading <a href="https://www.aamc.org/news-insights/how-we-fail-black-patients-pain" target="_blank">racial biases</a>,
-          medical racism has quite literally taken millions of lives and
-          livelihoods.
-          <br><br>Ultimately, these racist beliefs have built a broader racist system that perpetuates itself in so many
-          ways. White opioid users have been treated much <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5121004/" target="_blank">more sympathetically</a> by the media–and consequently through policy–than Black and Latino
-          heroin users. Communities of color suffer from a <a href="https://newsinteractive.post-gazette.com/longform/stories/poorhealth/1/" target="_blank">scarcity of
-            doctors & hospitals</a> while toxic facilities, the product of historical zoning discrimination, litter their
-          neighborhoods. Relatively weak means of <a href="https://news.umich.edu/targeting-minority-low-income-neighborhoods-for-hazardous-waste-sites/" target="_blank">resisting corporate interests</a> leave residents of these communities with
-          worse-off hospital
-          systems and factories
-          spewing unhealthy toxins in the air. Brutalistic and racist police forces<a href="https://www.sentencingproject.org/publications/un-report-on-racial-disparities/" target="_blank"> disproportionately criminalize and punish</a> people of
-          color–especially Black people–naturally resulting in outsized and generational mental and physical harm.
-          <br><br>
-          The confluence of these and many more factors leads us to today, when communities of color
-          are being <a href="https://medicalxpress.com/news/2020-05-covid-assault-black-brown.html" target="_blank">disproportionately impacted</a> by the COVID-19 crisis. When communities have historically been
-          underfunded, given unequal
-          medical care & political attention, and have factories that spew toxins that contribute to respiratory diseases
-          such as asthma, it is no surprise that these communities would consequently face higher risks to a respiratory
-          virus.
-        </div>
-        <div class="spacer"></div>
-      </div>
     </div>
-    <div class="spacer my-5"></div>
-  </section>
-  <section id="section03">
-    <div class="container my-5">
-      <div class="row">
-        <h3>Work for better</h3>
-        <div class="spacer"></div>
-        <div class="body-text">Given the devastating impacts of systemic racism in health outcomes, we have to commit to
-          being anti-racist. Proclaiming ourselves as “not racist,” means nothing, as it promises no action to overturn our
-          own potential
-          racist biases, let alone our harmful racist structures. Moreover, we can’t just work to overturn racist or unequal
-          structures, we must also foster new cooperation and egalitarianism: a system of true social–and therefore
-          medical–justice. This
-          spirit is fostered both through the on-the-ground <a href="act.html" target="_blank">action we can take,</a> and
-          the broader collectivist projects we pursue–like the <a href="A1.html" target="_blank">Pandemic Testing Board</a>.
-          We demand that
-          our broader policy goals align with the visions outlined by the Movement for Black Lives’ <a href="https://live-m4bl.pantheonsite.io/wp-content/uploads/2020/03/M4BL-COVID-19-Demands_FINAL.pdf" target="_blank">National Demands for
-            COVID-19.</a></div>
-        <div class="spacer"></div>
+    <div class="container text-center">
+    <img src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/pandemic_testing_board.jpg" class="img-fluid small" alt="Image">
+    </div>
 
-      </div>
-    </div>
-    <div class="spacer my-5"></div>
+  </div>
+  <div class="container-flex my-5">
     <div class="container my-5">
-      <div class="row">
-          <h3>ACTION ITEMS</h3>
-          <div class="spacer"></div>
+      <div class="section-header my-3">Action Items</div>
+
+
           <div class="body-text">
             So, how can we act?
             <ul>
@@ -198,45 +174,54 @@
               <li><a href="act.html" target="_blank">Volunteer</a> in your community, or support other communities from
                 afar–there’s lots of people who are in urgent need of our help in every community across the country</li>
             </ul>
-          </div>
-          <div class="spacer"></div>
-          <a href="/act.html">
-            <div class="btn">LEARN MORE</div>
-          </a>
-          <div class="spacer"></div>
-      </div>
-    </div>
-  </section>
 
-  <section id="footer">
-    <div class="container-flex">
-      <div class="container py-5">
-        <div class="row">
-          <div class="col-sm"><a href="index.html">Home</a></div>
-          <div class="col-sm"><a href="ptb.html">Pandemic Testing Board</a></div>
-          <div class="col-sm"><a href="https://www.facebook.com/IsolatingTogether" target="_blank">Facebook</a></div>
-        </div>
-        <div class="row">
-          <div class="col-sm"><a href="act.html">Act</a></div>
-          <div class="col-sm"><a href="antiracism.html">Anti-Racism</a></div>
-          <div class="col-sm"><a href="https://instagram.com/isolatogether/" target="_blank">Instagram</a></div>
 
-        </div>
-        <div class="row">
-          <div class="col-sm"><a href="create.html">Create</a></div>
-          <div class="col-sm"><a href="about.html">About</a></div>
-          <div class="col-sm"><a href="https://twitter.com/isolatogether/" target="_blank">Twitter</a></div>
-        </div>
-        <div class="row">
-          <div class="col-sm"><a href="inspire.html">Inspire</a></div>
-          <div class="col-sm"><a href="Contact.html">Contact</a></div>
-          <div class="col-sm"><a href="">Privacy Policy</a></div>
+
+
         </div>
       </div>
+
+
+
     </div>
-  </section>
+  </div>
 
 
+  <!--FOOTER-->
+  <div class="container-flex" style="background-color: #88CCF1; height: 200px; overflow: hidden;">
+    <div class="row" style="margin-top: 2%;">
+      <div class="col-2"></div>
+      <div class="col-2">
+        <h6><b>Isolating Together</b></h6>
+        <a href="act.html">
+          <h6>Act</h6>
+        </a>
+        <a href="create.html">
+          <h6>Create</h6>
+        </a>
+
+      </div>
+      <div class="col-2"></div>
+      <div class="col-2">
+        <a href="about.html">
+          <h6>About</h6>
+        </a>
+        <a href="contact.html">
+          <h6>Contact</h6>
+        </a>
+        <a href="https://twitter.com/Isolatogether" target="_blank">
+          <h6>Twitter</h6>
+        </a>
+        <a href="https://instagram.com/isolatogether?igshid=180zphtvw052e" target="_blank">
+          <h6>Instagram</h6>
+        </a>
+        <a href="https://www.facebook.com/IsolatingTogether/?modal=admin_todo_tour" target="_blank">
+          <h6>Facebook</h6>
+        </a>
+      </div>
+      <div class="col-2"></div>
+    </div>
+  </div>
 </body>
 
 </html>
