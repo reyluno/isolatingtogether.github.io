@@ -9,271 +9,281 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <!--Bootstrap/CSS Import-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
+  <!--Custom CSS-->
   <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/index.css" class="rel">
-  <link rel="stylesheet" href="css/responsive.css" class="rel">
+  <link rel="stylesheet" href="css/main.css" class="rel">
+  <link rel="stylesheet" href="css/mobile.css" class="rel">
   <!--Fonts-->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!--JavaScript-->
+  <script src="js/navbar.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/parallax.min.js"></script>
+  <script>
+    $(function() {
+      $(document).scroll(function() {
+        var $nav = $(".fixed-top");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height() + 600);
+      });
+    });
+  </script>
   <!--Tab Title-->
-  <title>Isolating Together</title>
+  <title>Isolating Together v2</title>
 </head>
 
 <body>
-  <!--NAVBAR-->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow-sm"
-    style="background-color: #88CCF1; padding: 1.2em 2em; z-index: 4;">
-
-    <a class="navbar-brand" href="index.html"><img
-        src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/LogoWhite_Small.png"
-        style="height: 50px; width: auto;"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
-      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" id="navbar">
+    <a class="navbar-brand" href="index.html"><img src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/LogoWhite_Small.png" alt="Isolating Together"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <div class="collapse navbar-collapse" id="navbarToggler">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="A1.html">Pandemic Testing Board</a>
+        <li class="nav-item">
+          <a class="nav-link bottom" href="act.html">Act</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="act.html">Act</a>
+        <li class="nav-item">
+          <a class="nav-link bottom" href="create.html">Create</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="create.html">Create</a>
+        <li class="nav-item">
+          <a class="nav-link bottom" href="inspire.html">Inspire</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="antiracism.html">Anti-Racism</a>
+        <li class="nav-item">
+          <a class="nav-link bottom" href="ptb.html">Pandemic Testing Board</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="about.html">About</a>
+        <li class="nav-item">
+          <a class="nav-link bottom" href="antiracism.html">Anti-Racism</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="contact.html">Contact</a>
+        <li class="nav-item">
+          <a class="nav-link bottom" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link bottom" href="contact.html">Contact</a>
         </li>
       </ul>
       <ul class="navbar-nav justify-content-end">
         <li class="nav-item">
-          <a href="https://instagram.com/isolatogether?igshid=180zphtvw052e" class="fa fa-instagram"
-            target="_blank"></a>
+          <a href="https://instagram.com/isolatogether?igshid=180zphtvw052e" class="fa fa-instagram" target="_blank"></a>
         </li>
         <li class="nav-item">
           <a href="https://twitter.com/Isolatogether" class="fa fa-twitter" target="_blank"></a>
         </li>
         <li class="nav-item">
-          <a href="https://www.facebook.com/IsolatingTogether/?modal=admin_todo_tour" class="fa fa-facebook"
-            target="_blank"></a>
+          <a href="https://www.facebook.com/IsolatingTogether/?modal=admin_todo_tour" class="fa fa-facebook" target="_blank"></a>
         </li>
       </ul>
-
     </div>
   </nav>
-  <!--LANDING PAGE-->
-  <div class="container-flex vh-100">
-    <!-- NOTE: Background Image and Title -->
-    <div class="container-flex vh-100 position-relative cn">
-      <div class="bg-overlay"><img
-          src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/background.jpg" class="bg"
-          alt="Responsive image"></div>
-      <div class="container mx-auto text-center">
-        <div class="lead">WELCOME TO</div>
-        <div class="title">isolating together.</div>
-        <div class="subtitle">Your one-stop-shop for hope and action.</div>
-        <!-- NOTE: Begin Mailchimp Form -->
-        <div class="container mt-3 cn">
-          <div id="mc_embed_signup">
-            <form
-              action="https://isolatingtogether.us10.list-manage.com/subscribe/post?u=93e1e620f065a9d32a80fcaf6&amp;id=6ffd4b5db6"
-              method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-              class="validate text-center" target="_blank" novalidate>
-              <div id="mc_embed_signup_scroll">
-                <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL"
-                  placeholder="email address" style="color: aliceblue;" required>
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                    name="b_93e1e620f065a9d32a80fcaf6_6ffd4b5db6" tabindex="-1" value=""></div>
-              </div>
-              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                  class="button"></div>
-            </form>
-          </div>
-          <!--End Mailchimp Signup Form mc_embed_signup-->
-        </div>
-        <!-- NOTE: i can't get this stupid script to scroll smoothly45 -->
-        <script>
-          $(function () {
-            $('a[href*=\\#]').on('click', function (e) {
-              e.preventDefault();
-              $('html, body').animate({
-                scrollTop: $($(this).attr('href')).offset().top
-              }, 500, 'linear');
-            });
-          });
-        </script>
-        <section id="scroll" class="arrow">
-          <a href="#mission"><span></span></a>
-        </section>
-
-
-      </div>
-    </div>
-    <!--CARD PAGE-->
-    <section id="mission" class="child">
-      <div class="container-flex vh-80 my-5 cn">
-        <div class="container my-5">
-          <div class="page-header">
-            <h1 class="section-header">Our Mission</h1>
-            <div class="body-text">Isolating Together is a people-powered operation working to face our challenges
-              together, at the scale they demand. This is a hub for hope and support–a place that channels negative
-              energy into positive action. Click <a href="https://forms.gle/id32x7HUm21VRZ2j6" target="_blank" style="color: #88CCF1;">here</a> to join our team.
+  <section id="hero">
+    <!-- Background Image Parallax -->
+    <div class="parallax-window vw-100 vh-100" data-parallax="scroll" data-image-src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/hero.jpg">
+      <div class="container vh-100 vw-100 cn">
+        <div class="hero-content mx-auto my-auto">
+          <div class="lead text-center">WELCOME TO</div>
+          <h1 class="mb-5 text-center">isolating together.</h1>
+          <div class="subtitle text-center">Your one-stop-shop for hope and action.</div>
+          <div class="container mt-3 cn">
+            <div id="mc_embed_signup">
+              <form action="https://isolatingtogether.us10.list-manage.com/subscribe/post?u=93e1e620f065a9d32a80fcaf6&amp;id=6ffd4b5db6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate text-center"
+                target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+                  <input type="email" value="" name="EMAIL" class="email form-control" id="mce-EMAIL" placeholder="email address" style="color: aliceblue;" required>
+                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_93e1e620f065a9d32a80fcaf6_6ffd4b5db6" tabindex="-1" value=""></div>
+                </div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+              </form>
             </div>
-
-          </div>
-        </div>
-
-    </section>
-    <!-- NOTE: Action Item 1 -->
-    <div class="container-flex" style="background-color: #88CCF1">
-      <div class="container cn">
-        <div class="row mt-5">
-          <div class="col"></div>
-          <div class="col-md-auto text-right">
-            <div class="lead">ACTION ITEM NO. 1</div>
-            <div class="section-header action-item" style="padding: 0; color: #fff;"><span class="material-icons"
-                style="font-size: 1em;">
-                announcement
-              </span><a href="A1.html"> Demand Mass
-                National Testing and Contact Tracing</a></div>
-            <div class="body-text text-right my-5" style="color: #fff;">
-              We need the Pandemic Testing Board–a coordinated effort to to test, trace, and take care of everyone in this country. <a href="https://petitions.whitehouse.gov/petition/we-need-pandemic-testing-board" target="_blank">Click this link to sign our petition.</a>
-            </div>
+            <!--End Mailchimp Signup Form mc_embed_signup-->
+            <script>
+              $(function() {
+                $('a[href*=\\#]').on('click', function(e) {
+                  e.preventDefault();
+                  $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                  }, 1000, 'swing');
+                });
+              });
+            </script>
+            <section id="scroll" class="arrow">
+              <a href="#section01"><span></span></a>
+            </section>
           </div>
         </div>
       </div>
     </div>
-    <!-- NOTE: Quote -->
-    <div class="container-flex my-5" style="background-color: #fff;">
-      <div class="title my-5 text-center" style="color: #88CCF1; font-size: 4em;"></div>
-    </div>
+  </section>
 
-    <!-- NOTE: Action Item 2 -->
-    <div class="container-flex" style="background-color: #88CCF1;">
-      <div class="container cn">
-        <div class="row mt-5">
-          <div class="col-md-auto">
-            <div class="lead" style="color: #fff;">ACTION ITEM NO. 2</div>
-            <div class="section-header action-item" style="padding: 0; color: #fff;"><a
-                href="https://forms.gle/id32x7HUm21VRZ2j6" target="_blank"><span class="material-icons"
-                  style="font-size: 1em;">
-                  card_giftcard
-                </span> Join Our Operation</div></a>
-            <div class="body-text my-5" style="color: #fff;">
-              Our movement is only as strong as the people within it. Whether organizing, designing graphics, or brainstorming new social media initiatives–you can help make this vision become reality by answering the call to action.
-            </div>
-          </div>
-          <div class="col">
-          </div>
-        </div>
-      </div>
-
-      <!-- NOTE: Action Item 3 -->
-      <div class="container-flex" style="background-color: #fff">
-        <div class="container cn">
-          <div class="row mt-5">
-            <div class="col"></div>
-            <div class="col-md-auto text-right">
-              <div class="lead" style="color: #1f1f1f;">ACTION ITEM NO. 3</div>
-              <div class="section-header action-item" style="padding: 0; color: #88CCF1;">Join Us Online <span
-                  class="material-icons" style="font-size: 1em;">
-                  phonelink_ring
-                </span></div>
-              <div class="body-text text-right my-5" style="color: #1f1f1f;">
-                Much of our organizing happens digitally. All this can be made easier with you joining us online and pushing our demands forward. Join us on <a href="https://www.facebook.com/IsolatingTogether/?modal=admin_todo_tour"
-                  target="_blank" style="color: #88CCF1;">Facebook,</a> <a href="https://twitter.com/Isolatogether" target="_blank" style="color: #88CCF1;">Twitter,</a> and <a
-                  href="https://instagram.com/isolatogether?igshid=180zphtvw052e" target="_blank" style="color: #88CCF1;">Instagram</a>, and help us spread the word to every corner of the country.
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- NOTE: Social Media Kit -->
-        <div class="container my-5">
-          <div class="section-header action-item" style="padding: 0; color: #88CCF1;">Social Media Kit</div>
-              <div class="body-text my-5">
-                Please share these graphic or any posts from our <a href="https://instagram.com/isolatogether?igshid=180zphtvw052e" target="_blank" style="color: #88CCF1;">Instagram</a> to help spread the word and build our movement. If you are interested in joining our team, please click <a href="https://forms.gle/id32x7HUm21VRZ2j6" target="_blank" style="color: #88CCF1;">here!</a>
-              </div>
-              <div class="container">
-                <img src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/IT_1.jpg" alt="" style="max-width: 45%;">
-                <img src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/IT_2.jpg" alt="" style="max-width: 45%;">
-              </div>
-            </div>
-            </div>
-      </div>
-
-    <!--FOOTER-->
-    <!-- NOTE: and also colors here and the text is in the css file -->
-    <div class="container-flex" style="background-color: #88CCF1; height: 200px; overflow: hidden;">
-      <div class="row" style="margin-top: 2%;">
-        <div class="col-2"></div>
-        <div class="col-2">
-          <h6><b>Isolating Together</b></h6>
-          <a href="act.html">
-            <h6>Act</h6>
-          </a>
-          <a href="create.html">
-            <h6>Create</h6>
-          </a>
-        </div>
-        <div class="col-2"></div>
-        <div class="col-2">
-          <a href="about.html">
-            <h6>About</h6>
-          </a>
-          <a href="contact.html">
-            <h6>Contact</h6>
-          </a>
-          <a href="https://twitter.com/Isolatogether" target="_blank">
-            <h6>Twitter</h6>
-          </a>
-          <a href="https://instagram.com/isolatogether?igshid=180zphtvw052e" target="_blank">
-            <h6>Instagram</h6>
-          </a>
-        </div>
-        <div class="col"></div>
-        <div class="col">
-          <a href="https://www.facebook.com/IsolatingTogether/?modal=admin_todo_tour" target="_blank">
-            <h6>Facebook</h6>
-          </a>
-        </div>
-
-        <div class="col-2"></div>
+  <section id="section01">
+    <div class="spacer"></div>
+    <div class="container-flex">
+      <div class="container my-5 py-5">
+        <h2>OUR MISSION</h2>
+        <p class="body-text">
+          Isolating Together is a people-powered operation working to face our challenges together, at the scale they demand. This is a hub for hope and support–a place that channels negative energy into positive action.
+        </p>
+        <p class="body-text">How?</p>
       </div>
     </div>
-  </div>
-  </div>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="/__/firebase/7.15.1/firebase-app.js"></script>
+  </section>
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="/__/firebase/7.15.1/firebase-analytics.js"></script>
+  <section id="section02">
+    <div class="container vh-100">
+      <div class="row">
+        <div class="col-sm-6">
+          <h2>THE</h2>
+          <h3>Pandemic Testing Board</h3>
+          <div class="body-text">
+            We must face this moment with the massive response it demands. We need the Pandemic Testing Board–a coordinated effort to create hundreds of thousands of jobs in order to produce tests, test every single person in this country, and
+            contact trace every person who tests positive.
+          </div>
+          <div class="spacer"></div>
+          <a href="ptb.html">
+            <div class="btn">LEARN MORE</div>
+          </a>
+          <div class="spacer"></div>
+        </div>
+        <div class="col-sm-5">
+          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/test1.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/test2.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/test3.jpg" alt="Third slide">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- Initialize Firebase -->
-  <script src="/__/firebase/init.js"></script>
+  <section id="section03">
+    <div class="container vh-100">
+      <div class="row">
+        <div class="col-sm-5">
+          <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/blm1.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/blm2.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/blm3.jpg" alt="Third slide">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <h2>THE FIGHT AGAINST</h2>
+          <h3>RACISM IN HEALTHCARE</h3>
+          <div class="body-text">
+            We must face this moment with the massive response it demands. We need the Pandemic Testing Board–a coordinated effort to create hundreds of thousands of jobs in order to produce tests, test every single person in this country, and
+            contact trace every person who tests positive.
+          </div>
+          <div class="spacer"></div>
+          <a href="antiracism.html">
+            <div class="btn">LEARN MORE</div>
+          </a>
+          <div class="spacer"></div>
+        </div>
 
-  <script>
-    firebase.analytics();
-  </script>
+      </div>
+    </div>
+  </section>
+
+  <section id="section04">
+    <div class="container-flex">
+      <div class="parallax-window vw-100 vh-100" data-parallax="scroll" data-image-src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/hero2blur.jpg">
+        <div class="container vh-100 vw-100 cn">
+          <div class="hero-content mx-auto my-auto">
+            <h2>ACTION ITEMS</h2>
+            <div class="row">
+              <div class="col-sm">
+                <a href="https://covid19protestrelief.com/" target="_blank">
+                  <div class="card">
+                    <div class="view overlay">
+                      <img class="card-img-top" src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/covidrelieffund.jpg" alt="Card image cap">
+                    </div>
+                </a>
+                <div class="card-body">
+                  <a href="https://covid19protestrelief.com/" target="_blank">
+                    <h4 class="card-title my-3">Donate to COVID Protest Relief Fund</h4>
+                  </a>
+                  <hr>
+                  <p class="body-text">SNL’s Chris Redd has created a fund to assist those who contract COVID-19, or sustain other injuries, while protesting; the funds will provide support for treatment/hospital bills, bail relief, and court
+                    expenses for protestors.</p>
+                  <a href="https://covid19protestrelief.com/" target="_blank">
+                    <h5><i class="fa fa-long-arrow-right black-text d-flex justify-content-end" aria-hidden="true"></i>
+                    </h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="card">
+                <div class="view overlay">
+                  <img class="card-img-top" src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/checkin.jpg" alt="Card image cap">
+                </div>
+                <div class="card-body">
+                  <a href="https://covid19protestrelief.com/" target="_blank">
+                    <h4 class="card-title my-3">Check in with a Neighbor, Friend, or Family Member</h4>
+                  </a>
+                  <hr>
+                  <p class="body-text">Our mission is one of care and love. We are all facing different levels of financial woes, threats to our health & well-being, and frustration with our brutal systems. That’s why it’s important that we meet this
+                    deeply challenging moment head-on and show those around us how much we care about them, even if we haven’t spoken in a while.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="footer">
+    <div class="container-flex">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-sm"><a href="index.html">Home</a></div>
+          <div class="col-sm"><a href="ptb.html">Pandemic Testing Board</a></div>
+          <div class="col-sm"><a href="https://www.facebook.com/IsolatingTogether" target="_blank">Facebook</a></div>
+        </div>
+        <div class="row">
+          <div class="col-sm"><a href="act.html">Act</a></div>
+          <div class="col-sm"><a href="antiracism.html">Anti-Racism</a></div>
+          <div class="col-sm"><a href="https://instagram.com/isolatogether/" target="_blank">Instagram</a></div>
+
+        </div>
+        <div class="row">
+          <div class="col-sm"><a href="create.html">Create</a></div>
+          <div class="col-sm"><a href="about.html">About</a></div>
+          <div class="col-sm"><a href="https://twitter.com/isolatogether/" target="_blank">Twitter</a></div>
+        </div>
+        <div class="row">
+          <div class="col-sm"><a href="inspire.html">Inspire</a></div>
+          <div class="col-sm"><a href="Contact.html">Contact</a></div>
+          <div class="col-sm"><a href="">Privacy Policy</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 </body>
 
 </html>

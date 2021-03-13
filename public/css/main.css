@@ -17,6 +17,14 @@ h2 {
   color: #060813;
 }
 
+h3 {
+    text-transform: uppercase;
+    font-size: 2em;
+    line-height: 1.0;
+    font-family: 'Anton';
+    color: #060813;
+  }
+
 .body-text {
   font: 1em/1.5 'Roboto';
 }
@@ -77,6 +85,10 @@ h2 {
 
 nav .navbar-nav li a {
   color: #fff !important;
+}
+
+a {
+  color: #004C6E;
 }
 
 a.bottom {
@@ -148,6 +160,9 @@ a.bottom:hover:before {
   opacity: 0.8; /* Firefox */
 }
 
+#info h3 {
+  font-size: 3em !important;
+}
 .arrow a {
   position: absolute;
   bottom: 20px;
@@ -214,6 +229,8 @@ a.bottom:hover:before {
     transform: rotate(-45deg) translate(0, 0);
   }
 }
+
+
 
 #section02 h3 {
   text-transform: uppercase;
@@ -296,4 +313,64 @@ a.bottom:hover:before {
 #footer a:hover {
   opacity: 1;
   text-decoration: none;
+}
+
+/*ACT PAGE*/
+#filters a {
+  color: #7EBDC2;
+  transition: 0.3s;
+}
+
+#filters a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+#filters .btn-primary {
+  border-radius: 0px;
+  border: none;
+  background-color: #060813;
+  transition: 0.3s;
+}
+
+#filters .btn-primary:hover {
+  opacity: 0.7;
+}
+
+#actions .fas {
+  margin-right: 10px;
+}
+
+#actions .card-title {
+  font: 1.5em 'Anton';
+  text-transform: uppercase;
+}
+
+#actions a:hover {
+  text-decoration: none;
+}
+
+#intro a {
+  color: #060813;
+}
+
+#modal .modal-content {
+  border-radius: 0px;
+  border: none;
+}
+
+#modal .btn {
+  border-radius: 0px;
+  border: none;
+  background-color: #060813;
+}
+
+#modal .modal-socials {
+  color: #d3d3d3;
+}
+
+#source {
+  text-decoration: none;
+  color: #060813;
+  padding: 0 5px;
 }
