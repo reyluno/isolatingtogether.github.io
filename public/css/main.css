@@ -112,6 +112,48 @@ a.bottom:hover:before {
   width: 100%;
 }
 
+.card {
+  border: none;
+  width: 300px;
+  -webkit-box-shadow: 10px 10px 20px -14px rgba(0,0,0,0.2);
+  -moz-box-shadow: 10px 10px 20px -14px rgba(0,0,0,0.2);
+  box-shadow: 10px 10px 20px -14px rgba(0,0,0,0.2);
+}
+
+.card-img {
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.card-title {
+  font-family: 'Open Sans';
+  font-size: 20px;
+  color: #fff;
+}
+
+.card-title a {
+  color: #fff;
+  transition: 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  font-size: 51px;
+}
+
+#section04  .card-body a {
+  color: #1f1f1f;
+}
+
+#section04 .card-title {
+  color: #1f1f1f;
+}
+
+.card-body a {
+  color: #fff;
+}
+
 #mc-embedded-subscribe-form {
   background-color: transparent;
 }

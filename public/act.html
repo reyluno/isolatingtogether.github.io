@@ -146,19 +146,28 @@
     </div>
   </section>
 
-  <section id="actions">
+  <!--RESULTS-->
+  <div class="container my-5" id="card_container"></div>
+
+  <!--<section id="actions">
     <div class="container vh-100">
-      <a href="" id="temp-link">
+      <a href="" id="temp-link" href="" target="_blank">
+        <img id="temp-img" class="card-img-top"
+            src="https://github.com/reyluno/isolatingtogether.github.io/raw/master/img/helper.jpg" alt="Card image cap">
+        </a>
         <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
           <div class="card-header" id="temp-location"><i class="fa fa-map-marker" aria-hidden="true"></i> </div>
           <div class="card-body">
+            <a id="temp-link" href="" target="_blank">
             <h5 class="card-title" id="temp-title"></h5>
-            <p class="body-text" id="temp-desc"></p>
+          </a>
+          <p class="body-text"><small id="temp-location" class="text-muted"></small></p>
+            <p class="card-text" id="temp-desc"></p>
           </div>
         </div>
       </a>
     </div>
-  </section>
+  </section>-->
 
 
 
@@ -192,15 +201,23 @@
 
   <template>
     <div class="col">
-      <a href="" id="temp-link">
-        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-          <div class="card-header" id="temp-location"><i class="fa fa-map-marker" aria-hidden="true"></i> </div>
+      <div class="card mb-3">
+      <a href="" class="card-link" id="temp-img-link" target="_blank">
+
+        <div class="card text-white bg-dark">
+          <div class="card-header" id="temp-location"><i class="fa fa-map-marker" aria-hidden="true"></i>
+            <img id="temp-img" class="card-img-top"
+                src="" alt="Card image cap">
+            </a>
+          </div>
           <div class="card-body">
-            <h5 class="card-title" id="temp-title"></h5>
-            <p class="body-text" id="temp-desc"></p>
+            <a id="temp-link" style="color:#fff;" href="" target="_blank">
+            <h5 class="card-title" id="temp-title"></h5></a>
+            <p class="body-text" style="font-size: 0.8em;" id="temp-desc"></p>
           </div>
         </div>
       </a>
+    </div>
     </div>
   </template>
 
